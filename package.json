@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node inky.js"
+    "start": "node lucky.js"
   },
   "dependencies": {
     "@adiwajshing/baileys": "^4.1.0",
