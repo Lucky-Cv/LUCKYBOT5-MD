@@ -1,5 +1,5 @@
-global.prefix = '-'
-global.botName = 'LUCKYBOT5-MD'
+global.prefix = '.'
+global.botName = 'LUCKYBOT'
 global.fake = botName + '༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻'
 global.groupSupport = 'https://chat.whatsapp.com/L5KgudBpBA21mA9ude4cVG'
 
