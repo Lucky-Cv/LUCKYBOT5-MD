@@ -186,7 +186,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 │ ➼ Rango: *${rank}*
 │ ➼ Balance: *$${bal}*
 
-\t\t\t𖣘✿🄲🄾🄼🄰🄽🄳🄾🅂✿𖣘
+\t\t\t\t\t\t\t\t\t *COMANDOS*
 
 \t●Ⓥⓘⓟ●
 ➼ ${prefix}join <link>${!inky.isJadi ? `
