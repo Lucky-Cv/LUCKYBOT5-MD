@@ -232,6 +232,8 @@ ${isStaff ? `
 ➼ ${prefix}sendfile <texto>
 `: ''}${isOwner ? `
 »  *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
+   $
+   >
 ➼ ${prefix}bc <texto>
 ➼ ${prefix}addbal <monto> / ${prefix}removebal <monto>
 ` : ''}
