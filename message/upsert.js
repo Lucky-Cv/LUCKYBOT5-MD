@@ -181,7 +181,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 
 \t\t\t\t\t\t\t\t\t *INFO USER*
 
-° ඬ⃟ Nombre: *${v.pushName}*
+│ ➼ Nombre: *${v.pushName}*
 │ ➼ Bio: *${bio}*
 │ ➼ Rango: *${rank}*
 │ ➼ Balance: *$${bal}*
@@ -189,7 +189,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
 »  *𝐕𝐈𝐏*
-➼ ${prefix}join <link>${!inky.isJadi ? `
+° ඬ⃟  ${prefix}join <link>${!inky.isJadi ? `
 ➼ ${prefix}serbot` : ''}
 
 \t●Ⓖⓡⓤⓟⓞⓢ●
