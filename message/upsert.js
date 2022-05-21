@@ -176,10 +176,10 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 
 \t\t\t\t\t\t\t\t\t ༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻
 
-┊ ➠ Prefijo: *⌜ ${prefix} ⌟*
-┊ ➠ Modo: *${inky.self ? 'Privado' : 'Publico'}*${inky.isJadi ? `
-┊➠ Bot Original: https://wa.me/${inky.botNumber}` : ''}
-┊➠ Libreria: *@adiwajshing/baileys@4.1.0*
+   *𝐩𝐫𝐞𝐟𝐢𝐣𝐨:* *⌜ ${prefix} ⌟*
+┊  Modo: *${inky.self ? 'Privado' : 'Publico'}*${inky.isJadi ? `
+┊  Bot Original: https://wa.me/${inky.botNumber}` : ''}
+┊  Libreria: *@adiwajshing/baileys@4.1.0*
 
 \t\t\t\t\t\t\t\t\t *INFO USER*
 
