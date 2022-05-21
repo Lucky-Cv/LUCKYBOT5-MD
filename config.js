@@ -1,16 +1,15 @@
 global.prefix = '-'
-global.botName = '𝐈𝐧𝐤𝐲𝐁𝐨𝐭-𝐌𝐃'
-global.fake = botName + ' ➣ ©ｴɳƙყᴳᵒᵈ'
+global.botName = 'LUCKYBOT5-MD'
+global.fake = botName + '༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻'
 global.groupSupport = 'https://chat.whatsapp.com/L5KgudBpBA21mA9ude4cVG'
 
 global.staff = [
-	'5492612301593', // Inky +54
-	'595976905967', // Cherlo
-	'595986460945' // Aiden
+	'34643694252', // Luckybot
+	'34641614021', // WhatsApp Bot
 ]
 global.owner = [
-	'595995660558', // Inky +595
-	'50768666666' // _`Kevin
+	'34643694252', // Inky +595
+	'34641614021' // _`Kevin
 ]
 
 global.mess = {
