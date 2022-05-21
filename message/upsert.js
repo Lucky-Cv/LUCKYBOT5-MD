@@ -240,7 +240,7 @@ ${isStaff ? `
 var footer = `│ ➼ ${fake}\n│ ➼ Runtime: ${runtime(process.uptime())}`
 var buttons = [
 	{urlButton: {displayText: 'Grupo de Soporte', url: groupSupport}},
-	{quickReplyButton: {displayText: '👑 Creador 👑', id: prefix + 'creador'}}
+	{quickReplyButton: {displayText: '⎙ Creador ', id: prefix + 'creador'}}
 ]
 replyTempImg(teks, footer, buttons, fs.readFileSync('./media/image/menu.jpg'))
 break
