@@ -233,7 +233,7 @@ ${isStaff ? `
 `: ''}${isOwner ? `
 »  *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
 ➼ ${prefix}bc <texto>
-➼ ${prefix}addbal <monto> / ${prefix}removebal <monto>
+*◦▷* ${prefix}addbal <monto> / ${prefix}removebal <monto>
 $
 >
 ` : ''}
