@@ -194,9 +194,9 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟   ${prefix}serbot` : ''}
 
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
-° ඬ⃟   ${prefix}antilink <on/off>
-° ඬ⃟   ${prefix}antiviewonce <on/off>${!inky.isJadi ? `
-° ඬ⃟   ${prefix}welcome <on/off>` : ''}
+° ඬ⃟   ${prefix}antilink <0/1>
+° ඬ⃟   ${prefix}antiviewonce <0/1>${!inky.isJadi ? `
+° ඬ⃟   ${prefix}welcome <0/1>` : ''}
 ° ඬ⃟   ${prefix}promote 
 ° ඬ⃟   ${prefix}demote
 ° ඬ⃟   ${prefix}kick
@@ -324,19 +324,19 @@ break
 case 'antilink':
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
-if (!q) return v.reply(`Use *${prefix + command} on* para activarlo o *${prefix + command} off* para desactivarlo`)
-if (Number(q) === on) {
+if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
+if (Number(q) === 1) {
 	if (isAntiLink) return v.reply('El antilink ya estaba activo')
 	antilink.push(v.chat)
 	fs.writeFileSync('./database/group/antilink.json', Json(antilink))
 	v.reply('Se ha activado el antilink')
-} else if (Number(q) === off) {
+} else if (Number(q) === 0) {
 	if (!isAntiLink) return v.reply('El antilink ya estaba desactivado')
 	antilink.splice(v.chat)
 	fs.writeFileSync('./database/group/antilink.json', Json(antilink))
 	v.reply('Se ha desactivado el antilink')
 } else {
-	v.reply(`Use *${prefix + command} on* para activarlo o *${prefix + command} off* para desactivarlo`)
+	v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
 }
 break
 
