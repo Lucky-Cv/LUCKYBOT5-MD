@@ -181,7 +181,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 
 \t\t\t\t\t\t\t\t\t *INFO USER*
 
-│ ➼ Nombre: *${v.pushName}*
+° ඬ⃟ Nombre: *${v.pushName}*
 │ ➼ Bio: *${bio}*
 │ ➼ Rango: *${rank}*
 │ ➼ Balance: *$${bal}*
