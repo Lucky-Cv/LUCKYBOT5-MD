@@ -194,10 +194,11 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟   ${prefix}serbot` : ''}
 
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
-° ඬ⃟   ${prefix}antilink <0/1>
-° ඬ⃟   ${prefix}antiviewonce <0/1>${!inky.isJadi ? `
-° ඬ⃟   ${prefix}welcome <0/1>` : ''}
-° ඬ⃟   ${prefix}promote / ${prefix}demote
+° ඬ⃟   ${prefix}antilink <on/off>
+° ඬ⃟   ${prefix}antiviewonce <on/off>${!inky.isJadi ? `
+° ඬ⃟   ${prefix}welcome <on/off>` : ''}
+° ඬ⃟   ${prefix}promote 
+° ඬ⃟   ${prefix}demote
 ° ඬ⃟   ${prefix}kick
 ° ඬ⃟   ${prefix}linkgc
 ° ඬ⃟   ${prefix}random
