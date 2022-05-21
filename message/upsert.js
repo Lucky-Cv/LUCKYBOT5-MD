@@ -188,7 +188,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
-» *𝐕𝐈𝐏* « 
+» *𝐕𝐈𝐏* «  
 ➼ ${prefix}join <link>${!inky.isJadi ? `
 ➼ ${prefix}serbot` : ''}
 
@@ -727,7 +727,7 @@ await v.react('✨')
 if (!q || !isUrl(q) && !q.includes('youtu')) return v.reply('Comando incorrecto, use: *' + prefix + command + ' <link>*')
 v.reply(mess.wait)
 hx.youtube(q)
-	.then(x =>{ v.react('😖') v.replyVid({url: x.link}, fake)})
+	.then(x => v.replyVid({url: x.link}, fake))
 	.catch(e => v.reply('Hubo un error al descargar su archivo'))
 break
 
