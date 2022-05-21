@@ -174,7 +174,7 @@ case 'menú':
 await v.react('✨')
 var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃𝙰 𝙴𝙻 𝙼𝙴𝙽𝚄 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙾́ 𝙳𝙴𝙻 𝙱𝙾𝚃*
 
-\t\t\t\t\t\t\t\t ༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻
+\t\t\t\t\t\t\t\t *༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻*
  *𝐏𝐫𝐞𝐟𝐢𝐣𝐨:* *⌜ ${prefix} ⌟*
  *𝐌𝐨𝐝𝐨:* *${inky.self ? 'Privado' : 'Publico'}*${inky.isJadi ? `
  Bot Original: https://wa.me/${inky.botNumber}` : ''}
@@ -238,7 +238,7 @@ ${isStaff ? `
 ° ඬ⃟   $
 ° ඬ⃟   >
 ` : ''}
-\t\t\t\t\t\t\t\t  ${botName}`
+\t\t\t\t\t\t\t\t  *${botName}*`
 var footer = `│ ➼ ${fake}\n│ ➼ Runtime: ${runtime(process.uptime())}`
 var buttons = [
 	{urlButton: {displayText: 'Grupo de Soporte', url: groupSupport}},
