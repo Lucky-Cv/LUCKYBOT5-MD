@@ -291,21 +291,21 @@ var none = () => {
 	v.reply(mess.wait)
 	inky.groupAcceptInvite(q.split('chat.whatsapp.com/')[1])
 		.then(x => {
-		v.reply('He ingresado exitosamente al grupo')
-		v.reply('He sido añadido al grupo por pedido de @' + senderNumber, x)
+		v.reply('*𝐇𝐞 𝐢𝐧𝐠𝐫𝐞𝐬𝐚𝐝𝐨 𝐞𝐱𝐢𝐭𝐨𝐬𝐚𝐦𝐞𝐧𝐭𝐞 𝐚𝐥 𝐠𝐫𝐮𝐩𝐨')
+		v.reply('*𝐇𝐞 𝐬𝐢𝐝𝐨 𝐚𝐧̃𝐚𝐝𝐢𝐝𝐨 𝐚𝐥 𝐠𝐫𝐮𝐩𝐨 𝐩𝐨𝐫 @*' + senderNumber, x)
 	})
-		.catch(e => v.reply('No he podido ingresar al grupo, verifique que el enlace funcione'))
+		.catch(e => v.reply('*𝐍𝐨 𝐡𝐞 𝐩𝐨𝐝𝐢𝐝𝐨 𝐢𝐧𝐠𝐫𝐞𝐬𝐚𝐫 𝐚𝐥 𝐠𝐫𝐮𝐩𝐨, 𝐩𝐨𝐫 𝐟𝐚𝐯𝐨𝐫 𝐯𝐞𝐫𝐢𝐟𝐢𝐪𝐮𝐞 𝐞𝐦 𝐞𝐧𝐥𝐚𝐜𝐞*'))
 }
 if (isVip) {
 	if (!q) return v.reply('Ingrese el enlace del grupo')
-	if (!isUrl(q) && !q.includes('whatsapp.com')) return v.reply('Link invalido')
+	if (!isUrl(q) && !q.includes('whatsapp.com')) return v.reply('*𝐋𝐢𝐧𝐤 𝐢𝐧𝐯𝐚𝐥𝐢𝐝𝐨*')
 	none()
 } else {
-	if (userBal < 10000) return v.reply('Necesitas *$10 K* para usar este comando')
-	if (!q) return v.reply('Ingrese el enlace del grupo')
-	if (!isUrl(q) && !q.includes('whatsapp.com')) return v.reply('Link invalido')
+	if (userBal < 10000) return v.reply('*𝐍𝐞𝐜𝐞𝐬𝐢𝐭𝐚𝐬* $10𝐊 *𝐩𝐚𝐫𝐚 𝐮𝐬𝐚𝐫 𝐞𝐬𝐭𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨*')
+	if (!q) return v.reply('*𝐈𝐧𝐠𝐫𝐞𝐬𝐞 𝐞𝐥 𝐞𝐧𝐥𝐚𝐜𝐞 𝐝𝐞𝐥 𝐠𝐫𝐮𝐩𝐨*')
+	if (!isUrl(q) && !q.includes('whatsapp.com')) return v.reply('*𝐋𝐢𝐧𝐤 𝐢𝐧𝐯𝐚𝐥𝐢𝐝𝐨*')
 	removeBal(senderNumber, 10000)
-	v.reply('Ha sido debitado de su cuenta *$10k*')
+	v.reply('*𝐇𝐚 𝐬𝐢𝐝𝐨 𝐝𝐞𝐛𝐢𝐭𝐚𝐝𝐨 𝐡𝐚 𝐬𝐮 𝐜𝐮𝐞𝐧𝐭𝐚* *$10k*')
 	none()
 }
 break
@@ -324,15 +324,15 @@ await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
 if (Number(q) === 1) {
-	if (isAntiLink) return v.reply('El antilink ya estaba activo')
+	if (isAntiLink) return v.reply('*𝐄𝐥 𝐚𝐧𝐭𝐢𝐥𝐢𝐧𝐤 𝐲𝐚 𝐞𝐬𝐭𝐚𝐛𝐚 𝐚𝐜𝐭𝐢𝐯𝐨*')
 	antilink.push(v.chat)
 	fs.writeFileSync('./database/group/antilink.json', Json(antilink))
-	v.reply('Se ha activado el antilink')
+	v.reply('*𝐒𝐞 𝐚𝐜𝐭𝐢𝐯𝐨 𝐞𝐥 𝐚𝐧𝐭𝐢𝐥𝐢𝐧𝐤*')
 } else if (Number(q) === 0) {
-	if (!isAntiLink) return v.reply('El antilink ya estaba desactivado')
+	if (!isAntiLink) return v.reply('*𝐄𝐥 𝐚𝐧𝐭𝐢𝐥𝐢𝐧𝐤 𝐲𝐚 𝐞𝐬𝐭𝐚𝐛𝐚 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨*')
 	antilink.splice(v.chat)
 	fs.writeFileSync('./database/group/antilink.json', Json(antilink))
-	v.reply('Se ha desactivado el antilink')
+	v.reply('*𝐒𝐞 𝐡𝐚 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨 𝐞𝐥 𝐚𝐧𝐭𝐢𝐥𝐢𝐧𝐤*')
 } else {
 	v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
 }
@@ -344,15 +344,15 @@ await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
 if (Number(q) === 1) {
-	if (isWelcome) return v.reply('El mensaje de bienvenida ya estaba activo')
+	if (isWelcome) return v.reply('*𝐄𝐥 𝐦𝐞𝐧𝐬𝐚𝐣𝐞 𝐝𝐞 𝐛𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐚 𝐲𝐚 𝐡𝐚𝐛𝐢𝐚 𝐬𝐢𝐝𝐨 𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨*')
 	welcome.push(v.chat)
 	fs.writeFileSync('./database/group/welcome.json', Json(welcome))
-	v.reply('Se ha activado el mensaje de bienvenida')
+	v.reply('*𝐒𝐞 𝐡𝐚 𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨 𝐞𝐥 𝐦𝐞𝐧𝐬𝐚𝐣𝐞 𝐝𝐞 𝐛𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐚*')
 } else if (Number(q) === 0) {
-	if (!isWelcome) return v.reply('El mensaje de bienvenida ya estaba desactivado')
+	if (!isWelcome) return v.reply('*𝐄𝐥 𝐦𝐞𝐧𝐬𝐚𝐣𝐞 𝐝𝐞 𝐛𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐚 𝐲𝐚 𝐡𝐚𝐛𝐢𝐚 𝐬𝐢𝐝𝐨 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨*')
 	welcome.splice(v.chat)
 	fs.writeFileSync('./database/group/welcome.json', Json(welcome))
-	v.reply('Se ha desactivado el mensaje de bienvenida')
+	v.reply('*𝐒𝐞 𝐡𝐚 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨 𝐞𝐥 𝐦𝐞𝐧𝐬𝐚𝐣𝐞 𝐝𝐞 𝐛𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐚*')
 } else {
 	v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
 }
@@ -363,15 +363,15 @@ await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
 if (Number(q) === 1) {
-	if (isAntiViewOnce) return v.reply('El antiviewonce ya estaba activo')
+	if (isAntiViewOnce) return v.reply('*𝐄𝐥 𝐚𝐧𝐭𝐢𝐯𝐢𝐞𝐰𝐨𝐧𝐜𝐞 𝐲𝐚 𝐡𝐚𝐛𝐢𝐚 𝐬𝐢𝐝𝐨 𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨*')
 	antiviewonce.push(v.chat)
 	fs.writeFileSync('./database/group/antiviewonce.json', Json(antiviewonce))
-	v.reply('Se ha activado el antiviewonce')
+	v.reply('*𝐒𝐞 𝐡𝐚 𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨 𝐞𝐥 𝐚𝐧𝐭𝐢𝐯𝐢𝐞𝐰𝐨𝐧𝐜𝐞*')
 } else if (Number(q) === 0) {
-	if (!isAntiViewOnce) return v.reply('El antiviewonce ya estaba desactivado')
+	if (!isAntiViewOnce) return v.reply('*𝐄𝐥 𝐚𝐧𝐭𝐢𝐯𝐢𝐞𝐰𝐨𝐧𝐜𝐞 𝐲𝐚 𝐡𝐚𝐛𝐢𝐚 𝐬𝐢𝐝𝐨 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨*')
 	antiviewonce.splice(v.chat)
 	fs.writeFileSync('./database/group/antiviewonce.json', Json(antiviewonce))
-	v.reply('Se ha desactivado el antiviewonce')
+	v.reply('*𝐒𝐞 𝐡𝐚 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨 𝐞𝐥 𝐚𝐧𝐭𝐢𝐯𝐢𝐞𝐰𝐨𝐧𝐜𝐞*')
 } else {
 	v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
 }
@@ -382,8 +382,8 @@ await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!isGroupAdmins) return v.reply(mess.only.admins)
 if (!isBotAdmin) return v.reply(mess.only.badmin)
-if (v.mentionUser[0] === undefined) return v.reply('Mencione a un usuario')
-if (v.sender === v.mentionUser[0]) return v.reply('No puede promotearse usted mismo')
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐞𝐧𝐜𝐢𝐨𝐧𝐞 𝐚 𝐮𝐧 𝐮𝐬𝐮𝐚𝐫𝐢𝐨*')
+if (v.sender === v.mentionUser[0]) return v.reply('*𝐍𝐨 𝐩𝐮𝐞𝐝𝐞 𝐩𝐫𝐨𝐦𝐨𝐭𝐞𝐚𝐫𝐬𝐞 𝐚 𝐮𝐬𝐭𝐞𝐝 𝐦𝐢𝐬𝐦𝐨*')
 if (groupAdmins.includes(v.mentionUser[0])) return v.reply(`El usuario @${v.mentionUser[0].split('@')[0]} ya es administrador`, v.chat, {mentions: [v.mentionUser[0], v.sender]})
 inky.groupParticipantsUpdate(v.chat, [v.mentionUser[0]], 'promote')
 	.then(x => v.reply(`Ha sido promovido a @${v.mentionUser[0].split('@')[0]} como administrador por @${senderNumber}`, v.chat, {mentions: [v.mentionUser[0], v.sender]}))
@@ -395,8 +395,8 @@ await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!isGroupAdmins) return v.reply(mess.only.admins)
 if (!isBotAdmin) return v.reply(mess.only.badmin)
-if (v.mentionUser[0] === undefined) return v.reply('Mencione a un usuario')
-if (v.sender === v.mentionUser[0]) return v.reply('No puede demotearse usted mismo')
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐞𝐧𝐜𝐢𝐨𝐧𝐞 𝐚 𝐮𝐧 𝐮𝐬𝐮𝐚𝐫𝐢𝐨*')
+if (v.sender === v.mentionUser[0]) return v.reply('*𝐍𝐨 𝐩𝐮𝐞𝐝𝐞 𝐝𝐞𝐦𝐨𝐭𝐞𝐚𝐫𝐬𝐞 𝐚 𝐮𝐬𝐭𝐞𝐝 𝐦𝐢𝐬𝐦𝐨*')
 if (!groupAdmins.includes(v.mentionUser[0])) return v.reply(`El usuario @${v.mentionUser[0].split('@')[0]} no es administrador`, v.chat, {mentions: [v.mentionUser[0], v.sender]})
 inky.groupParticipantsUpdate(v.chat, [v.mentionUser[0]], 'demote')
 	.then(x => v.reply(`Ha sido removido a @${v.mentionUser[0].split('@')[0]} como administrador por @${senderNumber}`, v.chat, {mentions: [v.mentionUser[0], v.sender]}))
@@ -408,9 +408,9 @@ await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!isGroupAdmins) return v.reply(mess.only.admins)
 if (!isBotAdmin) return v.reply(mess.only.badmin)
-if (v.mentionUser[0] === undefined) return v.reply('Mencione a un usuario')
-if (v.sender === v.mentionUser[0]) return v.reply('No puede kickearse usted mismo')
-if (groupAdmins.includes(v.mentionUser[0])) return v.reply('No es posible eliminar a un administrador')
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐞𝐧𝐜𝐢𝐧𝐞 𝐚 𝐮𝐧 𝐮𝐬𝐮𝐚𝐫𝐢𝐨*')
+if (v.sender === v.mentionUser[0]) return v.reply('*𝐍𝐨 𝐩𝐮𝐞𝐝𝐞 𝐛𝐚𝐧𝐞𝐚𝐫𝐬𝐞 𝐚 𝐮𝐬𝐭𝐞𝐝 𝐦𝐢𝐬𝐦𝐨*')
+if (groupAdmins.includes(v.mentionUser[0])) return v.reply('*𝐍𝐨 𝐞𝐬 𝐩𝐨𝐬𝐢𝐛𝐥𝐞 𝐞𝐥𝐢𝐦𝐢𝐧𝐚𝐫 𝐚 𝐮𝐧 𝐚𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚𝐝𝐨𝐫*')
 inky.groupParticipantsUpdate(v.chat, [v.mentionUser[0]], 'remove')
 	.then(x => v.reply(`Ha sido eliminado @${v.mentionUser[0].split('@')[0]} del grupo por @${senderNumber}`, v.chat, {mentions: [v.mentionUser[0], v.sender]}))
 	.catch(e => v.reply(e))
@@ -467,20 +467,20 @@ case 'guita':
 await v.react('✨')
 v.reply(`\t\t\t*${botName} Balance*
 
-│ ➼ Usuario: *@${senderNumber}*
-│ ➼ Balance: *$${bal}*${isNaN(bal) ? ` (${userBal})` : ''}
-│ ➼ Rango: *${rank}*`)
+*𝐔𝐬𝐮𝐚𝐫𝐢𝐨:* *@${senderNumber}*
+*𝐁𝐚𝐥𝐚𝐧𝐜𝐞:* *$${bal}*${isNaN(bal) ? ` (${userBal})` : ''}
+*𝐑𝐚𝐧𝐠𝐨:* *${rank}*`)
 break
 
 case 'transfer':
 case 'transferir':
 await v.react('✨')
-if (!q) return v.reply('Ingrese el monto que desea transferir')
-if (isNaN(args[0])) return v.reply('El monto ingresado debe de ser un numero')
-if (v.mentionUser[0] === undefined) return v.reply('Mencione al usuario que desea transferirle')
-if (args[0] < 100) return v.reply('Monto minimo para transferir es de $100')
-if (args[0].includes('.')) return v.reply('No se puede jugar con numero decimales')
-if (userBal < args[0]) return v.reply('No tienes suficiente dinero')
+if (!q) return v.reply('*𝐈𝐧𝐠𝐫𝐞𝐬𝐞 𝐞𝐥 𝐦𝐨𝐧𝐭𝐨 𝐪𝐮𝐞 𝐝𝐞𝐬𝐞𝐚 𝐭𝐫𝐚𝐧𝐬𝐟𝐞𝐫𝐢𝐫*')
+if (isNaN(args[0])) return v.reply('*𝐄𝐥 𝐦𝐨𝐧𝐭𝐨 𝐢𝐧𝐠𝐫𝐞𝐬𝐚𝐝𝐨 𝐝𝐞𝐛𝐞 𝐝𝐞 𝐬𝐞𝐫 𝐮𝐧 𝐧𝐮𝐦𝐞𝐫𝐨*')
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐞𝐧𝐜𝐢𝐨𝐧𝐞 𝐞𝐥 𝐮𝐬𝐮𝐚𝐫𝐢𝐨 𝐪𝐮𝐞 𝐝𝐞𝐬𝐞𝐚 𝐭𝐫𝐚𝐧𝐟𝐞𝐫𝐢𝐫*')
+if (args[0] < 100) return v.reply('*𝐌𝐨𝐧𝐭𝐨 𝐦𝐢𝐧𝐢𝐦𝐨 𝐩𝐚𝐫𝐚 𝐭𝐫𝐚𝐧𝐬𝐟𝐞𝐫𝐢𝐫 𝐞𝐬 𝐝𝐞* $100𝐤')
+if (args[0].includes('.')) return v.reply('*𝐍𝐨 𝐬𝐞 𝐩𝐮𝐞𝐝𝐞 𝐣𝐮𝐠𝐚𝐫 𝐜𝐨𝐧 𝐧𝐮𝐦𝐞𝐫𝐨𝐬 𝐝𝐞𝐜𝐢𝐦𝐚𝐥𝐞𝐬*')
+if (userBal < args[0]) return v.reply('*𝐍𝐨 𝐭𝐢𝐞𝐧𝐞 𝐬𝐮𝐟𝐢𝐜𝐢𝐞𝐧𝐭𝐞 𝐝𝐢𝐧𝐞𝐫𝐨*')
 addBal(v.mentionUser[0].split('@')[0], Number(args[0]))
 removeBal(senderNumber, Number(args[0]))
 v.reply(`\t\t\t${botName} Transfer\n\n│ ➼ Transferido de: @${senderNumber}\n│ ➼ Transferido a: @${v.mentionUser[0].split('@')[0]}\n│ ➼ Monto: $${args[0]}`, v.chat, {mentions: [v.mentionUser[0], v.sender]})
@@ -490,12 +490,12 @@ case 'baltop':
 case 'topbal':
 await v.react('✨')
 var none = JSON.parse(fs.readFileSync('./database/user/money.json'))
-var teks = '\t\t\t\t\t*' + botName + ' Top Bal*'
+var teks = '\t\t\t\t\t*' + botName + '*𝐓𝐨𝐩 𝐁𝐚𝐥*'
 none.sort((a, b) => (a.money < b.money) ? 1 : -1)
 let jidsTop = []
 var total = 10
 var userRank = (user) => {
-	if (owner.includes(user)) {var rankS = '👑 Owner 👑'} else if (staff.includes(user)) {var rankS = '🎮 Staff 🎮'} else if (vip.includes(user)) {var rankS = '✨ Vip ✨'} else {var rankS = 'Usuario'}
+	if (owner.includes(user)) {var rankS = '👑 𝐨𝐰𝐧𝐞𝐫 👑'} else if (staff.includes(user)) {var rankS = '🎮 𝐬𝐭𝐚𝐟𝐟 🎮'} else if (vip.includes(user)) {var rankS = '✨ 𝐯𝐢𝐩 ✨'} else {var rankS = '𝐮𝐬𝐮𝐚𝐫𝐢𝐨'}
 	return rankS
 }
 if (none.length < 10) total = none.length
@@ -513,26 +513,26 @@ var teks = `\t\t\t${botName} Shop
 
 \t\t\t\t\t*༒ Rangos ༒*
 
-╭───── *✨ Vip ✨* ─────
-│ \t${isVip ? '*Ya tienes el rango ✨ Vip ✨*' : 'Usa *' + prefix + command + ' vip* para comprar el rango *✨ Vip ✨*'}
-│ ➼ *Precio:* _$750K_
-│ ➼ *Ventajas:*
+╭───── *𝐕𝐈𝐏* ─────
+│ \t${isVip ? '*𝐘𝐚 𝐭𝐢𝐞𝐧𝐞𝐬 𝐞𝐥 𝐫𝐚𝐧𝐠𝐨 𝐯𝐢𝐩*' : '𝐔𝐬𝐚 *' + prefix + command + ' 𝐯𝐢𝐩* 𝐩𝐚𝐫𝐚 𝐜𝐨𝐦𝐩𝐫𝐚𝐫 𝐞𝐥 𝐫𝐚𝐧𝐠𝐨 *✨ 𝐕𝐢𝐩 '}
+│ *𝐏𝐫𝐞𝐜𝐢𝐨:* _$750K_
+│ *𝐕𝐞𝐧𝐭𝐚𝐣𝐚𝐬:*
 │ \t\t- Acceso al comando *${prefix}join* gratis${!inky.isJadi ? `
 │ \t\t- Acceso al comando *${prefix}serbot*` : ''}
 ╰───────────────╮
 
-│ ➼ Usuario: *@${senderNumber}*
-│ ➼ Balance: *$${bal}*
-│ ➼ Rango: *${rank}*
+│ *𝐔𝐬𝐮𝐚𝐫𝐢𝐨:* *@${senderNumber}*
+│ *𝐁𝐚𝐥𝐚𝐧𝐜𝐞:* *$${bal}*
+│ *𝐑𝐚𝐧𝐠𝐨:* *${rank}*
 
 Para comprar un articulo use *${prefix + command} <articulo>*`
 if (q.toLowerCase().includes('vip')) {
-	if (isVip) return v.reply('Usted ya tiene el rango *✨ Vip ✨*')
-	if (userBal < 750000) return v.reply('No tienes suficiente dinero para comprar el rango *✨ Vip ✨*')
+	if (isVip) return v.reply('*𝐔𝐬𝐭𝐞𝐝 𝐲𝐚 𝐭𝐢𝐞𝐧𝐞 𝐞𝐥 𝐫𝐚𝐠𝐨 𝐯𝐢𝐩*')
+	if (userBal < 750000) return v.reply('*𝐍𝐨 𝐭𝐢𝐞𝐧𝐞𝐬 𝐝𝐢𝐧𝐞𝐫𝐨 𝐩𝐚𝐫𝐚 𝐜𝐨𝐦𝐩𝐫𝐚𝐫 𝐞𝐥 𝐫𝐚𝐧𝐠𝐨 𝐯𝐢𝐩*')
 	removeBal(senderNumber, 750000)
 	vip.push(senderNumber)
 	fs.writeFileSync('./database/user/vip.json', Json(vip))
-	v.reply('@' + senderNumber + ' has comprado exitosamente el rango *✨ Vip ✨*, espero que lo disfrutes :D')
+	v.reply('@' + senderNumber + '*𝐇𝐚𝐬 𝐜𝐨𝐦𝐩𝐫𝐚𝐝𝐨 𝐞𝐥 𝐫𝐚𝐧𝐠𝐨 𝐯𝐢𝐩, 𝐞𝐬𝐩𝐞𝐫𝐨 𝐪𝐮𝐞 𝐥𝐨 𝐝𝐢𝐬𝐟𝐫𝐮𝐭𝐞𝐬*')
 } else {
 	v.reply(teks)
 }
@@ -545,10 +545,10 @@ break
 case 'bj':
 case 'blackjack':
 await v.react('✨')
-if (isBJFrom(bj, v.chat) ? isBJPlayer(bj, v.sender) : false) return v.reply('Ya tienes un juego en curso')
-if (isSpamBJ(senderNumber)) return v.reply('Espere 5 segundos para jugar de nuevo')
+if (isBJFrom(bj, v.chat) ? isBJPlayer(bj, v.sender) : false) return v.reply('*𝐘𝐚 𝐭𝐢𝐞𝐧𝐞𝐬 𝐮𝐧 𝐣𝐮𝐞𝐠𝐨 𝐞𝐧 𝐜𝐮𝐫𝐬𝐨*')
+if (isSpamBJ(senderNumber)) return v.reply('*𝐄𝐬𝐩𝐞𝐫𝐞 5 𝐬𝐞𝐠𝐮𝐧𝐝𝐨𝐬 𝐩𝐚𝐫𝐚 𝐞𝐦𝐩𝐞𝐳𝐚𝐫 𝐝𝐞 𝐧𝐮𝐞𝐯𝐨*')
 if (!q) return v.reply(`Ingrese un monto, ejemplo: ${prefix + command} <monto>`)
-if (isNaN(q)) return v.reply('El monto tiene que ser un numero')
+if (isNaN(q)) return v.reply('*𝐄𝐥 𝐦𝐨𝐧𝐭𝐨 𝐭𝐢𝐞𝐧𝐞 𝐪𝐮𝐞 𝐬𝐞𝐫 𝐮𝐧 𝐧𝐮𝐦𝐞𝐫𝐨*')
 if (q < 100) return v.reply('Monto minimo debe de ser de 100$')
 if (q.includes('.')) return v.reply('No se puede jugar con numero decimales')
 if (isVip) {
