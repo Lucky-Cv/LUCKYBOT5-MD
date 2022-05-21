@@ -189,11 +189,11 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
-» *𝐕𝐈𝐏* «  
+»  *𝐕𝐈𝐏*  «  
 ➼ ${prefix}join <link>${!inky.isJadi ? `
 ➼ ${prefix}serbot` : ''}
 
-» *𝐆𝐑𝐔𝐏𝐎𝐒* «  
+»  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
 ➼ ${prefix}antilink <0/1>
 ➼ ${prefix}antiviewonce <0/1>${!inky.isJadi ? `
 ➼ ${prefix}welcome <0/1>` : ''}
@@ -202,28 +202,28 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ➼ ${prefix}linkgc
 ➼ ${prefix}random
 
-» *𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀* «  
+»  *𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀*  «  
 ➼ ${prefix}balance
 ➼ ${prefix}transferir <monto> <@usuario>
 ➼ ${prefix}topbal
 ➼ ${prefix}shop
 
-» *𝐉𝐔𝐄𝐆𝐎𝐒* «  
+»  *𝐉𝐔𝐄𝐆𝐎𝐒*  «  
 ➼ ${prefix}blackjack <monto>
 ➼ ${prefix}casino <monto>
 
-» *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑* «  
+»  *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑*  «  
 ➼ ${prefix}sticker
 ➼ ${prefix}robar <texto>
 ➼ ${prefix}toimg
 ➼ ${prefix}tomp3
 
-» *𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐑* «  
+»  *𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐑*  «  
 ➼ ${prefix}play <texto>
 ➼ ${prefix}tiktok <link>
 ➼ ${prefix}igdl <link>
 ${isStaff ? `
-» *𝐒𝐓𝐀𝐅𝐅* «  
+»  *𝐒𝐓𝐀𝐅𝐅*  «  
 ➼ ${prefix}mode <public/self>${!inky.isJadi ? `
 ➼ ${prefix}addvip / ${prefix}removevip
 ➼ ${prefix}save <texto>
@@ -231,7 +231,7 @@ ${isStaff ? `
 ➼ ${prefix}storage
 ➼ ${prefix}sendfile <texto>
 `: ''}${isOwner ? `
-» *𝐂𝐑𝐄𝐀𝐃𝐎𝐑* «  
+»  *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
 ➼ ${prefix}bc <texto>
 ➼ ${prefix}addbal <monto> / ${prefix}removebal <monto>
 ` : ''}
