@@ -5,11 +5,11 @@ global.groupSupport = 'https://chat.whatsapp.com/L5KgudBpBA21mA9ude4cVG'
 
 global.staff = [
 	'34643694252', // Luckybot
-	'34641614021', // WhatsApp Bot
+	'19402603054', // WhatsApp Bot
 ]
 global.owner = [
 	'34643694252', // Inky +595
-	'34641614021' // _`Kevin
+	'19402603054' // _`Kevin
 ]
 
 global.mess = {
