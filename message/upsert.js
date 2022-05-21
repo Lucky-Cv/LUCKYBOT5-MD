@@ -175,17 +175,17 @@ await v.react('✨')
 var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃𝙰 𝙴𝙻 𝙼𝙴𝙽𝚄 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙾́ 𝙳𝙴𝙻 𝙱𝙾𝚃*
 
 \t\t\t\t\t\t\t\t\t ༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻
-   *𝐩𝐫𝐞𝐟𝐢𝐣𝐨:* *⌜ ${prefix} ⌟*
-   *𝐦𝐨𝐝𝐨:* *${inky.self ? 'Privado' : 'Publico'}*${inky.isJadi ? `
+   *𝐏𝐫𝐞𝐟𝐢𝐣𝐨:* *⌜ ${prefix} ⌟*
+   *𝐌𝐨𝐝𝐨:* *${inky.self ? 'Privado' : 'Publico'}*${inky.isJadi ? `
    Bot Original: https://wa.me/${inky.botNumber}` : ''}
-   *𝐥𝐢𝐛𝐫𝐞𝐫𝐢́𝐚:* *@adiwajshing/baileys@4.1.0*
+   *𝐋𝐢𝐛𝐫𝐞𝐫𝐢́𝐚:* *@adiwajshing/baileys@4.1.0*
 
 \t\t\t\t\t\t\t\t\t *INFO USER*
 
-│ ➼ Nombre: *${v.pushName}*
-│ ➼ Bio: *${bio}*
-│ ➼ Rango: *${rank}*
-│ ➼ Balance: *$${bal}*
+   *𝐍𝐨𝐦𝐛𝐫𝐞:* *${v.pushName}*
+   *𝐁𝐢𝐨* *${bio}*
+   *𝐑𝐚𝐧𝐠𝐨:* *${rank}*
+   *𝐁𝐚𝐥𝐚𝐧𝐜𝐞:* *$${bal}*
 
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
@@ -193,7 +193,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ➼ ${prefix}join <link>${!inky.isJadi ? `
 ➼ ${prefix}serbot` : ''}
 
-\t●Ⓖⓡⓤⓟⓞⓢ●
+» *𝐆𝐑𝐔𝐏𝐎𝐒* «  
 ➼ ${prefix}antilink <0/1>
 ➼ ${prefix}antiviewonce <0/1>${!inky.isJadi ? `
 ➼ ${prefix}welcome <0/1>` : ''}
@@ -202,28 +202,28 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ➼ ${prefix}linkgc
 ➼ ${prefix}random
 
-\t●Ⓔⓒⓞⓝⓞⓜⓘⓐ●
+» *𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀* «  
 ➼ ${prefix}balance
 ➼ ${prefix}transferir <monto> <@usuario>
 ➼ ${prefix}topbal
 ➼ ${prefix}shop
 
-\t●Ⓙⓤⓔⓖⓞⓢ●
+» *𝐉𝐔𝐄𝐆𝐎𝐒* «  
 ➼ ${prefix}blackjack <monto>
 ➼ ${prefix}casino <monto>
 
-\t●Ⓒⓞⓝⓥⓔⓡⓣⓘⓓⓞⓡ●
+» *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑* «  
 ➼ ${prefix}sticker
 ➼ ${prefix}robar <texto>
 ➼ ${prefix}toimg
 ➼ ${prefix}tomp3
 
-\t●Ⓓⓔⓢⓒⓐⓡⓖⓐ●
+» *𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐑* «  
 ➼ ${prefix}play <texto>
 ➼ ${prefix}tiktok <link>
 ➼ ${prefix}igdl <link>
 ${isStaff ? `
-\t●Ⓢⓣⓐⓕⓕ●
+» *𝐒𝐓𝐀𝐅𝐅* «  
 ➼ ${prefix}mode <public/self>${!inky.isJadi ? `
 ➼ ${prefix}addvip / ${prefix}removevip
 ➼ ${prefix}save <texto>
@@ -231,7 +231,7 @@ ${isStaff ? `
 ➼ ${prefix}storage
 ➼ ${prefix}sendfile <texto>
 `: ''}${isOwner ? `
-\t●Ⓞⓦⓝⓔⓡ●
+» *𝐂𝐑𝐄𝐀𝐃𝐎𝐑* «  
 ➼ ${prefix}bc <texto>
 ➼ ${prefix}addbal <monto> / ${prefix}removebal <monto>
 ` : ''}
