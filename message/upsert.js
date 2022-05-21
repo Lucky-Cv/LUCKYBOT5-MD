@@ -325,12 +325,12 @@ case 'antilink':
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
-if (Number(q) === 1) {
+if (Number(q) === off) {
 	if (isAntiLink) return v.reply('El antilink ya estaba activo')
 	antilink.push(v.chat)
 	fs.writeFileSync('./database/group/antilink.json', Json(antilink))
 	v.reply('Se ha activado el antilink')
-} else if (Number(q) === 0) {
+} else if (Number(q) === off) {
 	if (!isAntiLink) return v.reply('El antilink ya estaba desactivado')
 	antilink.splice(v.chat)
 	fs.writeFileSync('./database/group/antilink.json', Json(antilink))
