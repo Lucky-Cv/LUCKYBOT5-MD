@@ -336,7 +336,7 @@ if (Number(q) === on) {
 	fs.writeFileSync('./database/group/antilink.json', Json(antilink))
 	v.reply('Se ha desactivado el antilink')
 } else {
-	v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
+	v.reply(`Use *${prefix + command} on* para activarlo o *${prefix + command} off* para desactivarlo`)
 }
 break
 
