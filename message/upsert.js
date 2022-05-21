@@ -238,9 +238,7 @@ ${isStaff ? `
 $
 >
 ` : ''}
-\t\t╔════ ▓▓ ࿇ ▓▓ ════╗
-\t\t\t\t\t࿇𖣐${botName}𖣐࿇
-\t\t╚════ ▓▓ ࿇ ▓▓ ════╝`
+              ${botName}``
 var footer = `│ ➼ ${fake}\n│ ➼ Runtime: ${runtime(process.uptime())}`
 var buttons = [
 	{urlButton: {displayText: 'Grupo de Soporte', url: groupSupport}},
