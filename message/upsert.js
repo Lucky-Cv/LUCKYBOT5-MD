@@ -490,7 +490,7 @@ case 'baltop':
 case 'topbal':
 await v.react('✨')
 var none = JSON.parse(fs.readFileSync('./database/user/money.json'))
-var teks = '\t\t\t\t\t*' + botName + '*𝐓𝐨𝐩 𝐁𝐚𝐥*'
+var teks = '\t\t\t\t\t*' + botName + '*-𝐓𝐨𝐩 𝐁𝐚𝐥*'
 none.sort((a, b) => (a.money < b.money) ? 1 : -1)
 let jidsTop = []
 var total = 10
