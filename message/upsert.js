@@ -190,50 +190,50 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
 »  *𝐕𝐈𝐏*  «  
-➼ ${prefix}join <link>${!inky.isJadi ? `
-➼ ${prefix}serbot` : ''}
+° ඬ⃟   ${prefix}join <link>${!inky.isJadi ? `
+° ඬ⃟   ${prefix}serbot` : ''}
 
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
-➼ ${prefix}antilink <0/1>
-➼ ${prefix}antiviewonce <0/1>${!inky.isJadi ? `
-➼ ${prefix}welcome <0/1>` : ''}
-➼ ${prefix}promote / ${prefix}demote
-➼ ${prefix}kick
-➼ ${prefix}linkgc
-➼ ${prefix}random
+° ඬ⃟   ${prefix}antilink <0/1>
+° ඬ⃟   ${prefix}antiviewonce <0/1>${!inky.isJadi ? `
+° ඬ⃟   ${prefix}welcome <0/1>` : ''}
+° ඬ⃟   ${prefix}promote / ${prefix}demote
+° ඬ⃟   ${prefix}kick
+° ඬ⃟   ${prefix}linkgc
+° ඬ⃟   ${prefix}random
 
 »  *𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀*  «  
-➼ ${prefix}balance
-➼ ${prefix}transferir <monto> <@usuario>
-➼ ${prefix}topbal
-➼ ${prefix}shop
+° ඬ⃟   ${prefix}balance
+° ඬ⃟   ${prefix}transferir <monto> <@usuario>
+° ඬ⃟   ${prefix}topbal
+° ඬ⃟   ${prefix}shop
 
 »  *𝐉𝐔𝐄𝐆𝐎𝐒*  «  
-➼ ${prefix}blackjack <monto>
-➼ ${prefix}casino <monto>
+° ඬ⃟   ${prefix}blackjack <monto>
+° ඬ⃟   ${prefix}casino <monto>
 
 »  *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑*  «  
-➼ ${prefix}sticker
-➼ ${prefix}robar <texto>
-➼ ${prefix}toimg
-➼ ${prefix}tomp3
+° ඬ⃟   ${prefix}sticker
+° ඬ⃟   ${prefix}robar <texto>
+° ඬ⃟   ${prefix}toimg
+° ඬ⃟   ${prefix}tomp3
 
 »  *𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐑*  «  
-➼ ${prefix}play <texto>
-➼ ${prefix}tiktok <link>
-➼ ${prefix}igdl <link>
+° ඬ⃟   ${prefix}play <texto>
+° ඬ⃟   ${prefix}tiktok <link>
+° ඬ⃟   ${prefix}igdl <link>
 ${isStaff ? `
 »  *𝐒𝐓𝐀𝐅𝐅*  «  
-➼ ${prefix}mode <public/self>${!inky.isJadi ? `
-➼ ${prefix}addvip / ${prefix}removevip
-➼ ${prefix}save <texto>
-➼ ${prefix}delfile <texto>` : ''}
-➼ ${prefix}storage
-➼ ${prefix}sendfile <texto>
+° ඬ⃟   ${prefix}mode <public/self>${!inky.isJadi ? `
+° ඬ⃟   ${prefix}addvip / ${prefix}removevip
+° ඬ⃟   ${prefix}save <texto>
+° ඬ⃟   ${prefix}delfile <texto>` : ''}
+° ඬ⃟   ${prefix}storage
+° ඬ⃟   ${prefix}sendfile <texto>
 `: ''}${isOwner ? `
-»  *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
-➼ ${prefix}bc <texto>
-*◦▷* ${prefix}addbal <monto> / ${prefix}removebal <monto>
+° ඬ⃟   *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
+° ඬ⃟   {prefix}bc <texto>
+° ඬ⃟   ${prefix}addbal <monto> / ${prefix}removebal <monto>
 $
 >
 ` : ''}
