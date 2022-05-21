@@ -188,7 +188,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
-\t\t𝐕𝐈𝐏
+\t*𝐕𝐈𝐏*
 ➼ ${prefix}join <link>${!inky.isJadi ? `
 ➼ ${prefix}serbot` : ''}
 
