@@ -179,7 +179,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 │ ➼ Bot Original: https://wa.me/${inky.botNumber}` : ''}
 │ ➼ Libreria: *@adiwajshing/baileys@4.1.0*
 
-\t\t\t𖣘✿Ⓤⓢⓔⓡ Ⓘⓝⓕⓞ✿𖣘
+\t\t\t\t\t\t\t\t\t *INFO USER*
 
 │ ➼ Nombre: *${v.pushName}*
 │ ➼ Bio: *${bio}*
