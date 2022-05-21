@@ -238,7 +238,7 @@ ${isStaff ? `
 $
 >
 ` : ''}
-              ${botName}``
+              ${botName}`
 var footer = `│ ➼ ${fake}\n│ ➼ Runtime: ${runtime(process.uptime())}`
 var buttons = [
 	{urlButton: {displayText: 'Grupo de Soporte', url: groupSupport}},
