@@ -727,7 +727,7 @@ await v.react('✨')
 if (!q || !isUrl(q) && !q.includes('youtu')) return v.reply('Comando incorrecto, use: *' + prefix + command + ' <link>*')
 v.reply(mess.wait)
 hx.youtube(q)
-	.then(x => v.react('😖'); v.replyVid({url: x.link}, fake))
+	.then(x =>{ v.react('😖') v.replyVid({url: x.link}, fake)})
 	.catch(e => v.reply('Hubo un error al descargar su archivo'))
 break
 
