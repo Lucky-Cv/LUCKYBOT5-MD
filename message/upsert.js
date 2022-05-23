@@ -685,6 +685,54 @@ teks += `\n\nUse *${prefix}sendfile <nombre del archivo>* para visualizarlo${!in
 v.reply(teks)
 break
 
+case 'sendfile':
+await v.react('✨')
+var sFiles = new Array({ sticker: fs.readdirSync('./media/sticker'), audio: fs.readdirSync('./media/audio'), image: fs.readdirSync('./media/image'), video: fs.readdirSync('./media/video') })
+if ((sFiles[0].sticker.includes(q + '.webp')) || (sFiles[0].audio.includes(q + '.mp3')) || (sFiles[0].image.includes(q + '.jpg')) || (sFiles[0].video.includes(q + '.mp4'))) {
+	if (sFiles[0].sticker.includes(q + '.webp')) {
+		v.replyS(fs.readFileSync('./media/sticker/' + q + '.webp'))
+	}
+	if (sFiles[0].audio.includes(q + '.mp3')) {
+		v.replyAud(fs.readFileSync('./media/audio/' + q + '.mp3'), v.chat, {ptt: true})
+	}
+	if (sFiles[0].image.includes(q + '.jpg')) {
+		v.replyImg(fs.readFileSync('./media/image/' + q + '.jpg'), fake)
+	}
+	if (sFiles[0].video.includes(q + '.mp4')) {
+		v.replyVid(fs.readFileSync('./media/video/' + q + '.mp4'), fake)
+	}
+} else {
+	v.reply('*𝐍𝐎 𝐄𝐗𝐈𝐒𝐓𝐄 𝐍𝐈𝐍𝐆𝐔𝐍 𝐀𝐑𝐂𝐇𝐈𝐕𝐎 𝐂𝐎𝐍 𝐄𝐒𝐄 𝐍𝐎𝐌𝐁𝐑𝐄*')
+}
+break
+
+case 'delfile':
+if (!isStaff) return v.react('❌')
+if (inky.isJadi) return v.react('❌')
+await v.react('✨')
+var sFiles = new Array({ sticker: fs.readdirSync('./media/sticker'), audio: fs.readdirSync('./media/audio'), image: fs.readdirSync('./media/image'), video: fs.readdirSync('./media/video') })
+if ((sFiles[0].sticker.includes(q + '.webp')) || (sFiles[0].audio.includes(q + '.mp3')) || (sFiles[0].image.includes(q + '.jpg')) || (sFiles[0].video.includes(q + '.mp4'))) {
+	if (sFiles[0].sticker.includes(q + '.webp')) {
+		await fs.unlinkSync('./media/sticker/' + q + '.webp')
+		v.reply('*𝐒𝐓𝐈𝐂𝐊𝐄𝐑 𝐄𝐋𝐈𝐌𝐈𝐍𝐀𝐃𝐎 𝐄𝐗𝐈𝐓𝐎𝐒𝐀𝐌𝐄𝐍𝐓𝐄*')
+	}
+	if (sFiles[0].audio.includes(q + '.mp3')) {
+		await fs.unlinkSync('./media/audio/' + q + '.mp3')
+		v.reply('*𝐀𝐔𝐃𝐈𝐎 𝐄𝐋𝐈𝐌𝐈𝐍𝐀𝐃𝐎 𝐄𝐗𝐈𝐓𝐎𝐒𝐀𝐌𝐄𝐍𝐓𝐄*')
+	}
+	if (sFiles[0].image.includes(q + '.jpg')) {
+		await fs.unlinkSync('./media/image/' + q + '.jpg')
+		v.reply('𝐈𝐌𝐀𝐆𝐄𝐍 𝐄𝐋𝐈𝐌𝐈𝐍𝐀𝐃𝐀 𝐄𝐗𝐈𝐓𝐎𝐒𝐀𝐌𝐄𝐍𝐓𝐄*')
+	}
+	if (sFiles[0].video.includes(q + '.mp4')) {
+		await fs.unlinkSync('./media/video/' + q + '.mp4')
+		v.reply('*𝐕𝐈𝐃𝐄𝐎 𝐄𝐋𝐈𝐌𝐈𝐍𝐀𝐃𝐎 𝐄𝐗𝐈𝐓𝐎𝐒𝐀𝐌𝐄𝐍𝐓𝐄*')
+	}
+} else {
+	v.reply('*𝐍𝐎 𝐄𝐗𝐈𝐒𝐓𝐄 𝐍𝐈𝐍𝐆𝐔𝐍 𝐀𝐑𝐂𝐇𝐈𝐕𝐎 𝐂𝐎𝐍 𝐄𝐒𝐄 𝐍𝐎𝐌𝐁𝐑𝐄*')
+}
+break
+
 //                  VIP                //
 
 
