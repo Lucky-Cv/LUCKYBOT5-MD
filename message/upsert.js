@@ -163,8 +163,8 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 
 »  *𝐕𝐈𝐏*  «  
 ° ඬ⃟    ${prefix}join <enlacegp>
-° ඬ⃟    ${prefix}addvip
-° ඬ⃟    ${prefix}removevip
+° ඬ⃟    ${prefix}addvip @tag
+° ඬ⃟    ${prefix}removevip @tag
 
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
 ° ඬ⃟    ${prefix}   
@@ -392,7 +392,7 @@ case 'removevip':
 if (!isOwner) return v.react('❌')
 if (inky.isJadi) return v.react('❌')
 await v.react('✨')
-if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎𝐍𝐄 𝐀 𝐔𝐍 𝐔𝐒𝐔𝐀𝐑𝐈𝐎')
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎𝐍𝐄 𝐀 𝐔𝐍 𝐔𝐒𝐔𝐀𝐑𝐈𝐎*')
 if (!vip.includes(v.mentionUser[0].split('@')[0])) return v.reply('*𝐄𝐋 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐍𝐎 𝐄𝐒 𝐕𝐈𝐏*')
 vip.splice(v.mentionUser[0].split('@')[0])
 fs.writeFileSync('./database/user/vip.json', Json(vip))
