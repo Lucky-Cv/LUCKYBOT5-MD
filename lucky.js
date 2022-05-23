@@ -51,7 +51,6 @@ const start = () => {
 		logger: P({ level: 'silent' }),
 		printQRInTerminal: true,
 		auth: state,
-		version: [2, 2204, 13]
 	})
 	
 	store.bind(inky.ev)
