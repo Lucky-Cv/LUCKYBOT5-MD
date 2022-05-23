@@ -142,7 +142,7 @@ break
 		switch (command) {
 
 case 'menu':
-  case 'help'
+  case 'help':
 await v.react('✨')
 var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃𝙰 𝙴𝙻 𝙼𝙴𝙽𝚄 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙾́ 𝙳𝙴𝙻 𝙱𝙾𝚃*
 
