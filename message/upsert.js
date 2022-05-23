@@ -271,7 +271,7 @@ break
 
 case 'lucky':
 await await v.react('✨')
-if (!isQuotedSticker) return v.reply('Responda a un sticker con el comando ' + prefix + command)
+if (!isQuotedSticker) return v.reply('*𝐑𝐄𝐒𝐏𝐎𝐍𝐃𝐀 𝐀 𝐔𝐍 𝐒𝐓𝐈𝐂𝐊𝐄𝐑 𝐂𝐎𝐍 𝐄𝐋 𝐂𝐎𝐌𝐀𝐍𝐃𝐎* ' + prefix + command)
 v.reply(mess.wait)
 var nameWebp = getRandom('')
 var media = await v.quoted.download(nameWebp)
