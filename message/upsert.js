@@ -144,7 +144,8 @@ break
 case 'menu':
   case 'help':
 await v.react('✨')
-var teks = `*𝙷𝙾𝙻𝙰* `
+var teks = `*𝙷𝙾𝙻𝙰* 
+que tal`
 break
 
 			default:
