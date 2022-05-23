@@ -289,7 +289,7 @@ await v.react('✨')
 if (!q) return v.reply('Use *' + prefix + command + ' <texto>*')
 var play = await yts(q)
 var teks = `\t\t\t► ${botName} 
-/t/t/t/t/t/t/t/t/t/t Youtube
+                     Youtube
 
 *𝐓𝐈𝐓𝐔𝐋𝐎:* ${play.all[0].title}
 *𝐃𝐔𝐑𝐀𝐂𝐈𝐎𝐍:* ${play.all[0].timestamp}
