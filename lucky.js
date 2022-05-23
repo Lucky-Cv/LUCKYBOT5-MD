@@ -52,7 +52,7 @@ const start = () => {
 		printQRInTerminal: true,
         browser: ['Kitzia Device','Safari','1.0.0'],
         auth: state,
-        version
+        version: [2, 2204, 13]
 	})
 	
 	store.bind(inky.ev)
