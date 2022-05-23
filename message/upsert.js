@@ -219,9 +219,18 @@ var buttons = [
 replyTempImg(teks, footer, buttons, fs.readFileSync('./media/image/menu.jpg'))
 break
 
-//                  CREADOR                //
-
 //                  OWNER                //
+
+case 'dueño':
+case 'creador':
+case 'creator':
+case 'owner':
+await v.react('✨')
+v.replyContact('༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻', 'Creador de ' + botName, '34643694252')
+break
+
+
+//                  CREADOR                //
 
 //                  STAFF                //
 
