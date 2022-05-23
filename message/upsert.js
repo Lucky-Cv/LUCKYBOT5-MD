@@ -650,6 +650,41 @@ break
 
 //                  ECONOMÍA                //
 
+case 'storage':
+await v.react('✨')
+var sFiles = new Array({ sticker: fs.readdirSync('./media/sticker'), audio: fs.readdirSync('./media/audio'), image: fs.readdirSync('./media/image'), video: fs.readdirSync('./media/video') })
+teks = `\t\t\t\t${botName} Storage\n\nღ *Stickers* (${(sFiles[0].sticker.length - 1)})\n`
+if (sFiles[0].sticker.length === 1) teks += '\n│ ➼ '
+for (var x of sFiles[0].sticker) {
+	if (!(x === '@InkyGod03')) {
+		teks += `\n│ ➼ ${x.replace('.webp', '')}`
+	}
+}
+teks += `\n\nღ *Audios* (${(sFiles[0].audio.length - 1)})\n`
+if (sFiles[0].audio.length === 1) teks += '\n│ ➼ '
+for (var x of sFiles[0].audio) {
+	if (!(x === '@InkyGod03')) {
+		teks += `\n│ ➼ ${x.replace('.mp3', '')}`
+	}
+}
+teks += `\n\nღ *Imagenes* (${(sFiles[0].image.length - 1)})\n`
+if (sFiles[0].image.length === 1) teks += '\n│ ➼ '
+for (var x of sFiles[0].image) {
+	if (!(x === '@InkyGod03')) {
+		teks += `\n│ ➼ ${x.replace('.jpg', '')}`
+	}
+}
+teks += `\n\nღ *Videos* (${(sFiles[0].video.length - 1)})\n`
+if (sFiles[0].video.length === 1) teks += '\n│ ➼ '
+for (var x of sFiles[0].video) {
+	if (!(x === '@InkyGod03')) {
+		teks += `\n│ ➼ ${x.replace('.mp4', '')}`
+	}
+}
+teks += `\n\nUse *${prefix}sendfile <nombre del archivo>* para visualizarlo${!inky.isJadi ? `\n\nUse *${prefix}delfile <nombre del archivo>* para eliminarlo` : ''}`
+v.reply(teks)
+break
+
 //                  VIP                //
 
 
