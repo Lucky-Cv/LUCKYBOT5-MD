@@ -170,7 +170,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟    ${prefix}join
 ° ඬ⃟    ${prefix}del
 ° ඬ⃟    ${prefix}ban <@tag/responda_mensage>
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}link
 ° ඬ⃟    ${prefix}   
 ° ඬ⃟    ${prefix}  
 ° ඬ⃟    ${prefix}   
@@ -344,6 +344,20 @@ break
 
 
 //                  GRUPOS                //
+
+case 'tagall':
+await v.react('✨')
+if (!v.isGroup) return v.reply(mess.only.group)
+if (!isGroupAdmins) return v.reply(mess.only.admins)
+var jids = []
+groupMembers.map(x => jids.push(x.id))
+var teks = `\t\t\t\t\t*${groupMetadata.subject}*\n\n➫ *Total de admins:* ${groupAdmins.length}\n➫ *Total de miembros:* ${groupMembers.length}\n`
+for (let x of jids) {
+	teks += `\n| » @${x.split('@')[0]}`
+}
+v.reply(teks, v.chat, {mentions: jids})
+break
+
 
 case 'link':
 await v.react('✨')
