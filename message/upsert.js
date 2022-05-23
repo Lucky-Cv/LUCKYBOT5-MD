@@ -389,6 +389,7 @@ case 'welcome':
 if (inky.isJadi) return v.react('❌')
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
+if (!isGroupAdmins) return v.reply(mess.only.admins)
 if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
 if (Number(q) === 1) {
 	if (isWelcome) return v.reply('*𝐋𝐀 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐀 𝐇𝐀𝐁𝐈𝐀 𝐒𝐈𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎*')
@@ -408,6 +409,7 @@ break
 case 'antilink':
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
+if (!isGroupAdmins) return v.reply(mess.only.admins)
 if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
 if (Number(q) === 1) {
 	if (isAntiLink) return v.reply('*𝐄𝐋 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊 𝐘𝐀 𝐄𝐒𝐓𝐀𝐁𝐀 𝐀𝐂𝐓𝐈𝐕𝐎*')
