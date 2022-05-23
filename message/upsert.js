@@ -233,18 +233,28 @@ case 'modo':
 if (!isStaff) return v.react('❌')
 await v.react('✨')
 if (q.toLowerCase() === 'public') {
-	if (!inky.self) return v.reply('Ya estaba activo el modo publico')
+	if (!inky.self) return v.reply('*𝐘𝐀 𝐄𝐒𝐓𝐀𝐁𝐀 𝐄𝐋 𝐌𝐎𝐃𝐎 𝐏𝐔𝐁𝐋𝐈𝐂𝐎')
 	inky.self = false
-	v.reply('Se ha activado el modo publico')
+	v.reply('*𝐒𝐄 𝐇𝐀 𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎 𝐄𝐋 𝐌𝐎𝐃𝐎 𝐏𝐔𝐁𝐋𝐈𝐂𝐎*')
 } else if (q.toLowerCase() === 'self') {
-	if (inky.self) return v.reply('Ya estaba activo el modo privado')
+	if (inky.self) return v.reply('*𝐘𝐀 𝐄𝐒𝐓𝐀𝐁𝐀 𝐄𝐋 𝐌𝐎𝐃𝐎 𝐏𝐑𝐈𝐕𝐀𝐃𝐎*')
 	inky.self = true
-	v.reply('Se ha activado el modo privado')
+	v.reply('*𝐒𝐄 𝐇𝐀 𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎 𝐄𝐋 𝐌𝐎𝐃𝐎 𝐏𝐑𝐈𝐕𝐀𝐃𝐎*')
 } else {
-	v.reply('Use *' + prefix + command + ' <public/self>*')
+	v.reply('*𝐔𝐒𝐄*' + prefix + command + ' <public/self>*')
 }
 break
 
+case 'addvip':
+if (!isOwner) return v.react('❌')
+if (inky.isJadi) return v.react('❌')
+await v.react('✨')
+if (v.mentionUser[0] === undefined) return v.reply('Mencione a un usuario')
+if (vip.includes(v.mentionUser[0].split('@')[0])) return v.reply('El usuario ya tiene el rango *✨ Vip ✨*')
+vip.push(v.mentionUser[0].split('@')[0])
+fs.writeFileSync('./database/user/vip.json', Json(vip))
+v.reply('Ha sido agregado el rango *✨ Vip ✨* a @' + v.mentionUser[0].split('@')[0], v.chat, {mentions: [v.sender, v.mentionUser[0]]})
+break
 
 //                  CREADOR                //
 
