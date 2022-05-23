@@ -290,10 +290,10 @@ if (!q) return v.reply('Use *' + prefix + command + ' <texto>*')
 var play = await yts(q)
 var teks = `\t\t\t► ${botName} Youtube
 
-ღ *Titulo:* ${play.all[0].title}
-ღ *Duracion:* ${play.all[0].timestamp}
-ღ *Visitas:* ${h2k(play.all[0].views)}
-ღ *Author:* ${play.all[0].author.name}`
+*𝐓𝐈𝐓𝐔𝐋𝐎:* ${play.all[0].title}
+*𝐃𝐔𝐑𝐀𝐂𝐈𝐎𝐍:* ${play.all[0].timestamp}
+*𝐕𝐈𝐒𝐈𝐓𝐀𝐒* ${h2k(play.all[0].views)}
+*𝐀𝐔𝐓𝐇𝐎𝐑:* ${play.all[0].author.name}`
 var buttons = [
 	{urlButton: {displayText: '🔗 Link del Video 🔗', url: play.all[0].url}},
 	{quickReplyButton: {displayText: '🎵 Audio 🎵', id: prefix + 'ytmp3 ' + play.all[0].url}},
