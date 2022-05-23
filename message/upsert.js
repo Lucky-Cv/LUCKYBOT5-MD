@@ -169,7 +169,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
 ° ඬ⃟    ${prefix}join
 ° ඬ⃟    ${prefix}del
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}ban <@tag/responda_mensage>
 ° ඬ⃟    ${prefix}   
 ° ඬ⃟    ${prefix}   
 ° ඬ⃟    ${prefix}  
