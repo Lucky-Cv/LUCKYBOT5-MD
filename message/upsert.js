@@ -207,6 +207,7 @@ ${isStaff ? `
 ° ඬ⃟   *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
 ° ඬ⃟    ${prefix}owner
 ° ඬ⃟    ${prefix}modo self/public
+° ඬ⃟    ${prefix}addvip 
 ° ඬ⃟    $
 ° ඬ⃟    >
 ` : ''}
@@ -230,6 +231,7 @@ v.replyContact('༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻', 'Creador de ' + botName
 break
 
 case 'modo':
+if (!isOwner) return v.react('❌')
 if (!isStaff) return v.react('❌')
 await v.react('✨')
 if (q.toLowerCase() === 'public') {
