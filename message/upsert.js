@@ -349,8 +349,8 @@ case 'ban':
 					if (!v.isGroup) return v.reply(mess.only.group)
 					if (!isGroupAdmins) return v.reply(mess.only.admins)	
 				if (!isBotAdmin) return v.reply(mess.only.badmin)	
-					if (v.message.extendedTextMessage === undefined || v.message.extendedTextMessage === null) return reply('Etiqueta un mensaje oh utiliza @!')
-				    if (!v.message.extendedTextMessage === undefined || v.message.extendedTextMessage === null) return reply('Etiqueta un mensaje oh utiliza @!')
+					if (v.message.extendedTextMessage === undefined || v.message.extendedTextMessage === null) return v.reply('Etiqueta un mensaje oh utiliza @!')
+				    if (!v.message.extendedTextMessage === undefined || v.message.extendedTextMessage === null) return v.reply('Etiqueta un mensaje oh utiliza @!')
 			bai = v.message.extendedTextMessage.contextInfo.participant
 		    cnf.groupRemove(from, [bai])
 					break
