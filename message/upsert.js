@@ -136,6 +136,13 @@ module.exports = async(inky, v, store) => {
 		if (isAntiLink && isBotAdmin && !isGroupAdmins && v.body.includes('www.')) {
 			if (v.body.split('www.')[1].split(' ')[0] === (await inky.groupInviteCode(v.chat))) return
 			inky.groupParticipantsUpdate(v.chat, [v.sender], 'remove')
+				.then(x => v.reply('@' + senderNumber + ' ha sido eliminado por mandar link'))
+				.catch(e => v.reply(e))
+		}
+		
+		if (isAntiLink && isBotAdmin && !isGroupAdmins && v.body.includes('.com')) {
+			if (v.body.split('.com')[1].split(' ')[0] === (await inky.groupInviteCode(v.chat))) return
+			inky.groupParticipantsUpdate(v.chat, [v.sender], 'remove')
 				.then(x => v.reply('@' + senderNumber + ' ha sido eliminado por mandar link de otro grupo'))
 				.catch(e => v.reply(e))
 		}
