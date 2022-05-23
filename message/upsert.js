@@ -321,7 +321,37 @@ break
 
 //                  STAFF                //
 
+case 'shop':
+case 'tienda':
+await v.react('✨')
+var teks = `\t\t\t${botName} Shop
 
+\t\t\t\t\t*༒ Rangos ༒*
+
+╭───── *𝐕𝐈𝐏* ─────
+│ \t${isVip ? '*𝐘𝐀 𝐓𝐈𝐄𝐍𝐄𝐒 𝐄𝐋 𝐑𝐀𝐍𝐆𝐎 𝐕𝐈𝐏*' : '𝐔𝐒𝐀 *' + prefix + command + ' 𝐕𝐈𝐏* 𝐏𝐀𝐑𝐀 𝐂𝐎𝐌𝐏𝐑𝐀𝐑 𝐄𝐋 𝐑𝐀𝐍𝐆𝐋 𝐕𝐈𝐏*'}
+│ *𝐏𝐑𝐄𝐂𝐈𝐎:* _$750K_
+│ *𝐕𝐄𝐍𝐓𝐀𝐉𝐀𝐒:*
+│ \t\t- Acceso al comando *${prefix}join* gratis${!inky.isJadi ? `
+│ \t\t- Acceso al comando *${prefix}serbot*` : ''}
+╰───────────────╮
+
+│ *𝐔𝐒𝐔𝐀𝐑𝐈𝐎:* *@${senderNumber}*
+│ *𝐁𝐀𝐋𝐀𝐍𝐂𝐄:* *$${bal}*
+│ *𝐑𝐀𝐍𝐆𝐎:* *${rank}*
+
+Para comprar un articulo use *${prefix + command} <articulo>*`
+if (q.toLowerCase().includes('vip')) {
+	if (isVip) return v.reply('*𝐔𝐒𝐓𝐄𝐃 𝐘𝐀 𝐓𝐈𝐄𝐍𝐄 𝐄𝐋 𝐑𝐀𝐍𝐆𝐎 𝐕𝐈𝐏*')
+	if (userBal < 750000) return v.reply('*𝐍𝐎 𝐓𝐈𝐄𝐍𝐄 𝐒𝐔𝐅𝐈𝐂𝐈𝐄𝐍𝐓𝐄 𝐃𝐈𝐍𝐄𝐑𝐎 𝐏𝐀𝐑𝐀 𝐂𝐎𝐌𝐏𝐑𝐀𝐑 𝐄𝐋 𝐑𝐀𝐍𝐆𝐎 𝐕𝐈𝐏*')
+	removeBal(senderNumber, 750000)
+	vip.push(senderNumber)
+	fs.writeFileSync('./database/user/vip.json', Json(vip))
+	v.reply('@' + senderNumber + '*𝐇𝐀𝐒 𝐂𝐎𝐌𝐏𝐑𝐀𝐃𝐎 𝐄𝐋 𝐑𝐀𝐍𝐆𝐎 𝐕𝐈𝐏, 𝐄𝐒𝐏𝐄𝐑𝐎 𝐐𝐔𝐄 𝐋𝐎 𝐃𝐈𝐒𝐅𝐑𝐔𝐓𝐄𝐒;)*')
+} else {
+	v.reply(teks)
+}
+break
 
 case 'bal':
 case 'balance':
