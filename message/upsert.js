@@ -162,8 +162,9 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
 »  *𝐕𝐈𝐏*  «  
-° ඬ⃟    ${prefix}   
-° ඬ⃟    ${prefix}  
+° ඬ⃟    ${prefix}join <enlacegp>
+° ඬ⃟    ${prefix}addvip
+° ඬ⃟    ${prefix}removevip
 
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
 ° ඬ⃟    ${prefix}   
@@ -207,8 +208,6 @@ ${isStaff ? `
 ° ඬ⃟   *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
 ° ඬ⃟    ${prefix}owner
 ° ඬ⃟    ${prefix}modo self/public
-° ඬ⃟    ${prefix}addvip 
-° ඬ⃟    ${prefix}removevip
 ° ඬ⃟    $
 ° ඬ⃟    >
 ` : ''}
@@ -246,28 +245,6 @@ if (q.toLowerCase() === 'public') {
 } else {
 	v.reply('*𝐔𝐒𝐄: *' + prefix + command + ' <public/self>*')
 }
-break
-
-case 'addvip':
-if (!isOwner) return v.react('❌')
-if (inky.isJadi) return v.react('❌')
-await v.react('✨')
-if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎𝐍𝐃 𝐀 𝐔𝐍 𝐔𝐒𝐔𝐀𝐑𝐈𝐎*')
-if (vip.includes(v.mentionUser[0].split('@')[0])) return v.reply('*𝐄𝐋 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐘𝐀 𝐓𝐈𝐄𝐍𝐄 𝐄𝐋 𝐑𝐀𝐍𝐆𝐎* *✨ 𝐕𝐈𝐏✨*')
-vip.push(v.mentionUser[0].split('@')[0])
-fs.writeFileSync('./database/user/vip.json', Json(vip))
-v.reply('*𝐇𝐀 𝐒𝐈𝐃𝐎 𝐏𝐑𝐎𝐌𝐎𝐕𝐈𝐃𝐎 𝐀 𝐔𝐒𝐔𝐀𝐑𝐈𝐎*✨  𝐕𝐈𝐏 ✨* a @' + v.mentionUser[0].split('@')[0], v.chat, {mentions: [v.sender, v.mentionUser[0]]})
-break
-
-case 'removevip':
-if (!isOwner) return v.react('❌')
-if (inky.isJadi) return v.react('❌')
-await v.react('✨')
-if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎𝐍𝐄 𝐀 𝐔𝐍 𝐔𝐒𝐔𝐀𝐑𝐈𝐎')
-if (!vip.includes(v.mentionUser[0].split('@')[0])) return v.reply('*𝐄𝐋 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐍𝐎 𝐄𝐒 𝐕𝐈𝐏*')
-vip.splice(v.mentionUser[0].split('@')[0])
-fs.writeFileSync('./database/user/vip.json', Json(vip))
-v.reply('*𝐇𝐀 𝐒𝐈𝐃𝐎 𝐑𝐄𝐌𝐎𝐕𝐈𝐃𝐎 𝐃𝐄 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐕𝐈𝐏* de @' + v.mentionUser[0].split('@')[0], v.chat, {mentions: [v.sender, v.mentionUser[0]]})
 break
 
 //                  CREADOR                //
@@ -373,6 +350,55 @@ break
 //                  ECONOMÍA                //
 
 //                  VIP                //
+
+
+case 'join':
+await v.react('✨')
+var none = () => {
+	v.reply(mess.wait)
+	inky.groupAcceptInvite(q.split('chat.whatsapp.com/')[1])
+		.then(x => {
+		v.reply('*𝐇𝐄 𝐈𝐍𝐆𝐑𝐄𝐒𝐀𝐃𝐎 𝐄𝐗𝐈𝐓𝐎𝐒𝐀𝐌𝐄𝐍𝐓𝐄 𝐀𝐋 𝐆𝐑𝐔𝐏𝐎')
+		v.reply('*𝐇𝐄 𝐒𝐈𝐃𝐎 𝐀𝐍̃𝐀𝐃𝐈𝐃𝐎 𝐀𝐋 𝐆𝐑𝐔𝐏𝐎 𝐏𝐎𝐑 @*' + senderNumber, x)
+	})
+		.catch(e => v.reply('*𝐍𝐎 𝐇𝐄 𝐏𝐈𝐃𝐈𝐃𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐀𝐑 𝐀𝐋 𝐆𝐑𝐔𝐏𝐎, 𝐏𝐎𝐑 𝐅𝐀𝐕𝐎𝐑 𝐕𝐄𝐑𝐈𝐅𝐈𝐐𝐔𝐄 𝐄𝐋 𝐄𝐍𝐋𝐀𝐂𝐄*'))
+}
+if (isVip) {
+	if (!q) return v.reply('*𝐈𝐍𝐆𝐑𝐄𝐒𝐄 𝐄𝐋 𝐄𝐍𝐋𝐀𝐂𝐄 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎*')
+	if (!isUrl(q) && !q.includes('whatsapp.com')) return v.reply('*𝐋𝐈𝐍𝐊 𝐈𝐍𝐕𝐀𝐋𝐈𝐃𝐎*')
+	none()
+} else {
+	if (userBal < 10000) return v.reply('*𝐍𝐄𝐂𝐄𝐒𝐈𝐓𝐀𝐒* $10𝐊 *𝐏𝐀𝐑𝐀 𝐔𝐒𝐀𝐑 𝐄𝐒𝐓𝐄 𝐂𝐎𝐌𝐀𝐍𝐃𝐎*')
+	if (!q) return v.reply('*𝐈𝐍𝐆𝐑𝐄𝐒𝐄 𝐄𝐋 𝐄𝐍𝐋𝐀𝐂𝐄 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎*')
+	if (!isUrl(q) && !q.includes('whatsapp.com')) return v.reply('*𝐋𝐈𝐍𝐊 𝐈𝐍𝐕𝐀𝐋𝐈𝐃𝐎*')
+	removeBal(senderNumber, 10000)
+	v.reply('*𝐇𝐀 𝐒𝐈𝐃𝐎 𝐃𝐄𝐁𝐈𝐓𝐀𝐃𝐎 𝐀 𝐒𝐔 𝐂𝐔𝐄𝐍𝐓𝐀* *$10k*')
+	none()
+}
+break
+
+case 'addvip':
+if (!isOwner) return v.react('❌')
+if (inky.isJadi) return v.react('❌')
+await v.react('✨')
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎𝐍𝐃 𝐀 𝐔𝐍 𝐔𝐒𝐔𝐀𝐑𝐈𝐎*')
+if (vip.includes(v.mentionUser[0].split('@')[0])) return v.reply('*𝐄𝐋 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐘𝐀 𝐓𝐈𝐄𝐍𝐄 𝐄𝐋 𝐑𝐀𝐍𝐆𝐎* *✨ 𝐕𝐈𝐏✨*')
+vip.push(v.mentionUser[0].split('@')[0])
+fs.writeFileSync('./database/user/vip.json', Json(vip))
+v.reply('*𝐇𝐀 𝐒𝐈𝐃𝐎 𝐏𝐑𝐎𝐌𝐎𝐕𝐈𝐃𝐎 𝐀 𝐔𝐒𝐔𝐀𝐑𝐈𝐎*✨  𝐕𝐈𝐏 ✨* a @' + v.mentionUser[0].split('@')[0], v.chat, {mentions: [v.sender, v.mentionUser[0]]})
+break
+
+case 'removevip':
+if (!isOwner) return v.react('❌')
+if (inky.isJadi) return v.react('❌')
+await v.react('✨')
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎𝐍𝐄 𝐀 𝐔𝐍 𝐔𝐒𝐔𝐀𝐑𝐈𝐎')
+if (!vip.includes(v.mentionUser[0].split('@')[0])) return v.reply('*𝐄𝐋 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐍𝐎 𝐄𝐒 𝐕𝐈𝐏*')
+vip.splice(v.mentionUser[0].split('@')[0])
+fs.writeFileSync('./database/user/vip.json', Json(vip))
+v.reply('*𝐇𝐀 𝐒𝐈𝐃𝐎 𝐑𝐄𝐌𝐎𝐕𝐈𝐃𝐎 𝐃𝐄 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐕𝐈𝐏* de @' + v.mentionUser[0].split('@')[0], v.chat, {mentions: [v.sender, v.mentionUser[0]]})
+break
+
 			default:
 				
 				if (isOwner) {
