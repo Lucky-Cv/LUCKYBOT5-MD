@@ -308,7 +308,7 @@ none.sort((a, b) => (a.money < b.money) ? 1 : -1)
 let jidsTop = []
 var total = 10
 var userRank = (user) => {
-	if (owner.includes(user)) {var rankS = '👑 𝐎𝐖𝐍𝐄𝐑 👑'} else if (staff.includes(user)) {var rankS = '🎮 𝐒𝐓𝐀𝐅𝐅 🎮'} else if (vip.includes(user)) {var rankS = '✨  𝐕𝐈𝐏 '✨} else {var rankS = '𝐔𝐒𝐔𝐀𝐑𝐈𝐈'}
+	if (owner.includes(user)) {var rankS = '👑 𝐎𝐖𝐍𝐄𝐑 👑'} else if (staff.includes(user)) {var rankS = '🎮 𝐒𝐓𝐀𝐅𝐅 🎮'} else if (vip.includes(user)) {var rankS = '✨  𝐕𝐈𝐏 ✨'} else {var rankS = '𝐔𝐒𝐔𝐀𝐑𝐈𝐈'}
 	return rankS
 }
 if (none.length < 10) total = none.length
