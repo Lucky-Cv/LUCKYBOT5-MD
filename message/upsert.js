@@ -208,6 +208,7 @@ ${isStaff ? `
 ° ඬ⃟    ${prefix}owner
 ° ඬ⃟    ${prefix}modo self/public
 ° ඬ⃟    ${prefix}addvip 
+° ඬ⃟    ${prefix}removevip
 ° ඬ⃟    $
 ° ඬ⃟    >
 ` : ''}
