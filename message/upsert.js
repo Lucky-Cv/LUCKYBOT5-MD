@@ -305,7 +305,7 @@ break
 
 case 'ytmp3':
 await v.react('✨')
-if (!q || !isUrl(q) && !q.includes('youtu')) return v.reply('*𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐈𝐍𝐂𝐎𝐑𝐑𝐄𝐂𝐓𝐎, 𝐔𝐒𝐄': *' + prefix + command + ' <link>*')
+if (!q || !isUrl(q) && !q.includes('youtu')) return v.reply('*𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐈𝐍𝐂𝐎𝐑𝐑𝐄𝐂𝐓𝐎, 𝐔𝐒𝐄: *' + prefix + command + ' <link>*')
 v.reply(mess.wait)
 hx.youtube(q)
 	.then(async(x) => {
