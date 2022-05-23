@@ -172,8 +172,8 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟    ${prefix}ban <@tag/responda_mensage>
 ° ඬ⃟    ${prefix}link
 ° ඬ⃟    ${prefix}tagall
-° ඬ⃟    ${prefix}  
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}antilink 0/1
+° ඬ⃟    ${prefix}viewonce
 ° ඬ⃟    ${prefix}   
 
 »  *𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀*  «  
