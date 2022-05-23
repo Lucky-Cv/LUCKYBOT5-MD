@@ -218,20 +218,14 @@ var buttons = [
 ]
 replyTempImg(teks, footer, buttons, fs.readFileSync('./media/image/menu.jpg'))
 break
-//                  OWNER              //
-case 'bc':
-if (!isOwner) return v.react('❌')
-await v.react('✨')
-var getGroups = await inky.groupFetchAllParticipating()
-var groupsID = Object.entries(getGroups).slice(0).map(x => x[1]).map(x => x.id)
-for (let id of groupsID) {
-	var jids = []
-	var groupMdata = await inky.groupMetadata(id)
-	var groupMem = groupMdata.participants
-	groupMem.map(x => jids.push(x.id))
-	v.reply(`\t\t\t\t*${botName} BroadCast*\n\n${q}`, id, {mentions: jids})
-}
-break
+
+//                  CREADOR                //
+
+//                  OWNER                //
+
+//                  STAFF                //
+
+//                  DESCARGAS                //
 
 			default:
 				
