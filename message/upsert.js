@@ -345,7 +345,7 @@ break
 
 //                  GRUPOS                //
 
-case 'linkgc':
+case 'link':
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!isGroupAdmins) return v.reply(mess.only.admins)
