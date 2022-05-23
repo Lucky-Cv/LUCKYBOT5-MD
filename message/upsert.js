@@ -162,12 +162,12 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
 »  *𝐕𝐈𝐏*  «  
-° ඬ⃟    ${prefix}join <enlacegp>
+° ඬ⃟    ${prefix}join <enlace gp>
 ° ඬ⃟    ${prefix}addvip @tag
 ° ඬ⃟    ${prefix}removevip @tag
 
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}join
 ° ඬ⃟    ${prefix}   
 ° ඬ⃟    ${prefix}   
 ° ඬ⃟    ${prefix}   
