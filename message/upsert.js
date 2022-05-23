@@ -171,7 +171,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟    ${prefix}del
 ° ඬ⃟    ${prefix}ban <@tag/responda_mensage>
 ° ඬ⃟    ${prefix}link
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}tagall
 ° ඬ⃟    ${prefix}  
 ° ඬ⃟    ${prefix}   
 ° ඬ⃟    ${prefix}   
