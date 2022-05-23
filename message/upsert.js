@@ -253,7 +253,7 @@ if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎�
 if (vip.includes(v.mentionUser[0].split('@')[0])) return v.reply('*𝐄𝐋 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐘𝐀 𝐓𝐈𝐄𝐍𝐄 𝐄𝐋 𝐑𝐀𝐍𝐆𝐎* *✨ 𝐕𝐈𝐏✨*')
 vip.push(v.mentionUser[0].split('@')[0])
 fs.writeFileSync('./database/user/vip.json', Json(vip))
-v.reply('*𝐇𝐀 𝐒𝐈𝐃𝐎 𝐏𝐑𝐎𝐌𝐎𝐕𝐈𝐃𝐎 𝐀 𝐔𝐒𝐔𝐀𝐑𝐈𝐎*✨ Vip ✨* a @' + v.mentionUser[0].split('@')[0], v.chat, {mentions: [v.sender, v.mentionUser[0]]})
+v.reply('*𝐇𝐀 𝐒𝐈𝐃𝐎 𝐏𝐑𝐎𝐌𝐎𝐕𝐈𝐃𝐎 𝐀 𝐔𝐒𝐔𝐀𝐑𝐈𝐎*✨  𝐕𝐈𝐏 ✨* a @' + v.mentionUser[0].split('@')[0], v.chat, {mentions: [v.sender, v.mentionUser[0]]})
 break
 
 //                  CREADOR                //
