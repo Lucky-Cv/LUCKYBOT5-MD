@@ -162,51 +162,51 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
 »  *𝐕𝐈𝐏*  «  
-° ඬ⃟   ${prefix}join <link>${!inky.isJadi ? `
-° ඬ⃟   ${prefix}serbot` : ''}
+° ඬ⃟   
+° ඬ⃟  
 
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
-° ඬ⃟   ${prefix}antilink <0/1>
-° ඬ⃟   ${prefix}antiviewonce <0/1>${!inky.isJadi ? `
-° ඬ⃟   ${prefix}welcome <0/1>` : ''}
-° ඬ⃟   ${prefix}promote 
-° ඬ⃟   ${prefix}demote
-° ඬ⃟   ${prefix}kick
-° ඬ⃟   ${prefix}linkgc
-° ඬ⃟   ${prefix}random
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟  
+° ඬ⃟   
+° ඬ⃟   
 
 »  *𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀*  «  
-° ඬ⃟   ${prefix}balance
-° ඬ⃟   ${prefix}transferir <monto> <@usuario>
-° ඬ⃟   ${prefix}topbal
-° ඬ⃟   ${prefix}shop
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟ 
 
 »  *𝐉𝐔𝐄𝐆𝐎𝐒*  «  
-° ඬ⃟   ${prefix}blackjack <monto>
-° ඬ⃟   ${prefix}casino <monto>
+° ඬ⃟   
+° ඬ⃟   
 
-»  *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑*  «  
-° ඬ⃟   ${prefix}sticker
-° ඬ⃟   ${prefix}robar <texto>
-° ඬ⃟   ${prefix}toimg
-° ඬ⃟   ${prefix}tomp3
+»  *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑*  « 
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟  
 
 »  *𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐑*  «  
-° ඬ⃟   ${prefix}play <texto>
-° ඬ⃟   ${prefix}tiktok <link>
-° ඬ⃟   ${prefix}igdl <link>
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟   
 ${isStaff ? `
 »  *𝐒𝐓𝐀𝐅𝐅*  «  
-° ඬ⃟   ${prefix}mode <public/self>${!inky.isJadi ? `
-° ඬ⃟   ${prefix}addvip / ${prefix}removevip
-° ඬ⃟   ${prefix}save <texto>
-° ඬ⃟   ${prefix}delfile <texto>` : ''}
-° ඬ⃟   ${prefix}storage
-° ඬ⃟   ${prefix}sendfile <texto>
+° ඬ⃟   `
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟   
+° ඬ⃟  
 `: ''}${isOwner ? `
 ° ඬ⃟   *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
-° ඬ⃟   {prefix}bc <texto>
-° ඬ⃟   ${prefix}addbal <monto> / ${prefix}removebal <monto>
+° ඬ⃟  
+° ඬ⃟  
 ° ඬ⃟   $
 ° ඬ⃟   >
 ` : ''}
