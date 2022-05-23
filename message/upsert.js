@@ -148,7 +148,8 @@ var teks = `*𝙷𝙾𝙻𝙰*${v.pushName}* *El bot esta en mantenimiento
 \t\t\t\t\t\t\t\t *༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻*
  *𝐏𝐫𝐞𝐟𝐢𝐣𝐨:* *⌜ ${prefix} ⌟*
  *𝐌𝐨𝐝𝐨:* *${inky.self ? 'Privado' : 'Publico'}*${inky.isJadi ? `
- Bot Original: https://wa.me/${inky.botNumber}` : ''}\t\t\t\t\t\t\t\t *༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻*
+ Bot Original: https://wa.me/${inky.botNumber}` :''}
+ \t\t\t\t\t\t\t\t *༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻*
  *𝐏𝐫𝐞𝐟𝐢𝐣𝐨:* *⌜ ${prefix} ⌟*
  *𝐌𝐨𝐝𝐨:* *${inky.self ? 'Privado' : 'Publico'}*${inky.isJadi ? `
  Bot Original: https://wa.me/${inky.botNumber}` : ''}
