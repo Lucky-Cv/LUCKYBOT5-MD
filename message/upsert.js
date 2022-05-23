@@ -448,6 +448,19 @@ break
 
 //                  GRUPOS                //
 
+case 'add':
+					if (!v.isGroup) return v.reply(mess.only.group)
+					if (args.length < 1) return v.reply(`Usa ${prefix}add 502######`)
+					if (args[0].startsWith('011')) return reply('Utilice el código de país ejemplo : +52..')
+					try {
+						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
+						inky.groupAdd(from, [num])
+					} catch (e) {
+						console.log('Error :', e)
+						v.reply('No se pudo agregar el objetivo, tal vez porque esta en modo privado')
+					}
+					break
+
 case 'promote':
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
