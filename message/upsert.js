@@ -226,7 +226,8 @@ case 'creador':
 case 'creator':
 case 'owner':
 await v.react('✨')
-v.replyContact('༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻', 'Creador de ' + botName, '34643694252')
+v.replyContact('༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻', 'Creador de ' + botName, '34643694252');
+v.replyContact('WHATSAPP BOT', 'Creador de ' + botName, '34641614021')
 break
 
 
