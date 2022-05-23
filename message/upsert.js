@@ -345,6 +345,19 @@ break
 
 //                  GRUPOS                //
 
+case 'kick':
+await v.react('✨')
+if (!v.isGroup) return v.reply(mess.only.group)
+if (!isGroupAdmins) return v.reply(mess.only.admins)
+if (!isBotAdmin) return v.reply(mess.only.badmin)
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐞𝐧𝐜𝐢𝐧𝐞 𝐚 𝐮𝐧 𝐮𝐬𝐮𝐚𝐫𝐢𝐨*')
+if (v.sender === v.mentionUser[0]) return v.reply('*𝐍𝐨 𝐩𝐮𝐞𝐝𝐞 𝐛𝐚𝐧𝐞𝐚𝐫𝐬𝐞 𝐚 𝐮𝐬𝐭𝐞𝐝 𝐦𝐢𝐬𝐦𝐨*')
+if (groupAdmins.includes(v.mentionUser[0])) return v.reply('*𝐍𝐨 𝐞𝐬 𝐩𝐨𝐬𝐢𝐛𝐥𝐞 𝐞𝐥𝐢𝐦𝐢𝐧𝐚𝐫 𝐚 𝐮𝐧 𝐚𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚𝐝𝐨𝐫*')
+inky.groupParticipantsUpdate(v.chat, [v.mentionUser[0]], 'remove')
+	.then(x => v.reply(`Ha sido eliminado @${v.mentionUser[0].split('@')[0]} del grupo por @${senderNumber}`, v.chat, {mentions: [v.mentionUser[0], v.sender]}))
+	.catch(e => v.reply(e))
+break
+
 case 'ban':
 					if (!v.isGroup) return v.reply(mess.only.group)
 					if (!isGroupAdmins) return v.reply(mess.only.admins)	
