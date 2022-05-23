@@ -364,6 +364,23 @@ break
 
 //                  GRUPOS                //
 
+case 'viewonce':
+await v.react('✨')
+if (!isQuotedViewOnce) return
+var teks = `\t\t\t\t*AntiViewOnce*\n\n│ ➼ *Enviado por:* @${v.quoted.sender.split('@')[0]}\n│ ➼ *Texto:* ${v.quoted.msg.caption ? v.quoted.msg.caption : 'Sin Texto'}`
+var jids = [v.quoted.sender]
+v.quoted.mentionUser.map(x => jids.push(x))
+if (v.quoted.msg.type === 'imageMessage') {
+	var nameJpg = getRandom('')
+	v.replyImg(await v.quoted.download(nameJpg), teks, v.chat, {mentions: jids})
+	await fs.unlinkSync(nameJpg + '.jpg')
+} else if (v.quoted.msg.type === 'videoMessage') {
+	var nameMp4 = getRandom('')
+	v.replyVid(await v.quoted.download(nameMp4), teks, v.chat, {mentions: jids})
+	await fs.unlinkSync(nameMp4 + '.mp4')
+}
+break
+
 case 'tagall':
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
