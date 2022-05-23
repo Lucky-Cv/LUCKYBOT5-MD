@@ -144,19 +144,11 @@ break
 case 'menu':
   case 'help':
 await v.react('✨')
-var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃𝙰 𝙴𝙻 𝙼𝙴𝙽𝚄 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙾́ 𝙳𝙴𝙻 𝙱𝙾𝚃*
-` 
-`
-var footer = `│ ➼ ${fake}\n│ ➼ Runtime: ${runtime(process.uptime())}`
-var buttons = [
-	{urlButton: {displayText: 'Grupo de Soporte', url: groupSupport}},
-	{quickReplyButton: {displayText: '⎙ Creador ', id: prefix + 'creador'}}
-]
-replyTempImg(teks, footer, buttons, fs.readFileSync('./media/image/menu.jpg'))
+var teks = `HOLA`
 break
 
 
-			}default:
+			default:
 				
 				if (isOwner) {
 					if (v.body.startsWith('x')) {
