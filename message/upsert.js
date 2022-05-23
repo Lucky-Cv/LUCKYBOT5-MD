@@ -350,7 +350,7 @@ await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!isGroupAdmins) return v.reply(mess.only.admins)
 var code = await inky.groupInviteCode(v.chat)
-v.reply('\t\t\t*𝐋𝐈𝐍𝐊 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎*' + groupMetadata.subject + '*\n│  » https://chat.whatsapp.com/' + code)
+v.reply('\t\t\tLink del grupo *' + groupMetadata.subject + '*\n│  » https://chat.whatsapp.com/' + code)
 break
 
 case 'ban':
