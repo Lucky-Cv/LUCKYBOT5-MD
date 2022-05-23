@@ -187,7 +187,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 
 »  *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑*  « 
 ° ඬ⃟    ${prefix}sticker / ${prefix}s
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}robar
 ° ඬ⃟    ${prefix}   
 ° ඬ⃟    ${prefix}  
 
@@ -265,6 +265,17 @@ v.reply(mess.wait)
 var nameWebp = getRandom('')
 var media = await v.quoted.download(nameWebp)
 await writeExif(media, {packname: pack, author: author})
+	.then(x => v.replyS(x))
+await fs.unlinkSync(nameWebp + '.webp')
+break
+
+case 'lucky':
+await await v.react('✨')
+if (!isQuotedSticker) return v.reply('Responda a un sticker con el comando ' + prefix + command)
+v.reply(mess.wait)
+var nameWebp = getRandom('')
+var media = await v.quoted.download(nameWebp)
+await writeExif(media)
 	.then(x => v.replyS(x))
 await fs.unlinkSync(nameWebp + '.webp')
 break
