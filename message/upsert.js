@@ -227,6 +227,13 @@ break
 
 //                  DESCARGAS                //
 
+//                  GRUPOS                //
+
+//                  JUEGOS                //
+
+//                  ECONOMÍA                //
+
+//                  VIP                //
 			default:
 				
 				if (isOwner) {
