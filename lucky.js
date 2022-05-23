@@ -50,9 +50,7 @@ const start = () => {
 	const inky = makeWASocket({
 		logger: P({ level: 'silent' }),
 		printQRInTerminal: true,
-        browser: ['Kitzia Device','Safari','1.0.0'],
-        auth: state,
-        version: [2, 2204, 13]
+		auth: state,
 	})
 	
 	store.bind(inky.ev)
