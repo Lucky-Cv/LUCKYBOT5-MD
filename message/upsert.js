@@ -218,7 +218,7 @@ var buttons = [
 ]
 replyTempImg(teks, footer, buttons, fs.readFileSync('./media/image/menu.jpg'))
 break
-//                  CREADOR                //
+//                  OWNER              //
 case 'bc':
 if (!isOwner) return v.react('❌')
 await v.react('✨')
