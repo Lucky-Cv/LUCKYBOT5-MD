@@ -205,8 +205,8 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟    ${prefix} 
 
 »  *𝐉𝐔𝐄𝐆𝐎𝐒*  «  
-° ඬ⃟    ${prefix}   
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}blackjack
+° ඬ⃟    ${prefix}casino
 
 »  *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑*  « 
 ° ඬ⃟    ${prefix}sticker / ${prefix}s
