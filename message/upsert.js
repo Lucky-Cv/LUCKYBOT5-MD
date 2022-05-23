@@ -352,7 +352,7 @@ case 'ban':
 					if (v.message.extendedTextMessage === undefined || v.message.extendedTextMessage === null) return v.reply('Etiqueta un mensaje oh utiliza @!')
 				    if (!v.message.extendedTextMessage === undefined || v.message.extendedTextMessage === null) return v.reply('Etiqueta un mensaje oh utiliza @!')
 			bai = v.message.extendedTextMessage.contextInfo.participant
-		    cnf.groupRemove(from, [bai])
+		    inky.groupRemove(from, [bai])
 					break
 
 case 'del':
