@@ -284,6 +284,25 @@ break
 
 //                  DESCARGAS                //
 
+case 'play':
+await v.react('✨')
+if (!q) return v.reply('Use *' + prefix + command + ' <texto>*')
+var play = await yts(q)
+var teks = `\t\t\t► ${botName} Youtube
+
+ღ *Titulo:* ${play.all[0].title}
+ღ *Duracion:* ${play.all[0].timestamp}
+ღ *Visitas:* ${h2k(play.all[0].views)}
+ღ *Author:* ${play.all[0].author.name}`
+var buttons = [
+	{urlButton: {displayText: '🔗 Link del Video 🔗', url: play.all[0].url}},
+	{quickReplyButton: {displayText: '🎵 Audio 🎵', id: prefix + 'ytmp3 ' + play.all[0].url}},
+	{quickReplyButton: {displayText: '🎬 Video 🎬', id: prefix + 'ytmp4 ' + play.all[0].url}}
+]
+var buffer = await getBuffer(play.all[0].image)
+replyTempImg(teks, fake, buttons, buffer)
+break
+
 //                  GRUPOS                //
 
 //                  JUEGOS                //
