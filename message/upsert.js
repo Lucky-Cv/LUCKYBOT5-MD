@@ -220,9 +220,9 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟    ${prefix}
 ${isStaff ? `
 »  *𝐒𝐓𝐀𝐅𝐅*  «  
-° ඬ⃟    ${prefix}
-° ඬ⃟    ${prefix}
-° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}dinero
+° ඬ⃟    ${prefix}transferir
+° ඬ⃟    ${prefix}topbal
 ° ඬ⃟    ${prefix}
 ° ඬ⃟    ${prefix}
 ° ඬ⃟    ${prefix}
