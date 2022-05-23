@@ -591,7 +591,6 @@ case 'delete':
 await v.react('✨')
 if (!v.quoted) return v.reply('*𝐑𝐄𝐒𝐏𝐎𝐍𝐃𝐄 𝐀 𝐔𝐍 𝐌𝐄𝐍𝐒𝐀𝐉𝐄 𝐃𝐄𝐋 𝐁𝐎𝐓 𝐂𝐎𝐍 𝐄𝐋 𝐂𝐎𝐌𝐀𝐍𝐃𝐎*' + prefix + command)
 if (!v.quoted.fromMe) return v.reply('*𝐒𝐎𝐋𝐎 𝐏𝐔𝐄𝐃𝐎 𝐁𝐎𝐑𝐑𝐀𝐑 𝐌𝐄𝐍𝐒𝐀𝐉𝐄𝐒 𝐌𝐈𝐎𝐒*')
-if (v.isGroup && !isGroupAdmins) return v.reply(mess.only.admins)
 await v.quoted.delete()
 break
 
