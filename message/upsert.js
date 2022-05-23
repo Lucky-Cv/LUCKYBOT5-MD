@@ -193,9 +193,10 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟    ${prefix}ban <@tag/responda_mensage>
 ° ඬ⃟    ${prefix}link
 ° ඬ⃟    ${prefix}tagall
-° ඬ⃟    ${prefix}antilink 0/1
+° ඬ⃟    ${prefix}antilink 1/0
 ° ඬ⃟    ${prefix}viewonce
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}welcome 1/0
+° ඬ⃟    ${prefix}antiviewonce 1/0
 
 »  *𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀*  «  
 ° ඬ⃟    ${prefix}   
@@ -384,6 +385,25 @@ break
 
 
 //                  GRUPOS                //
+
+case 'antiviewonce':
+await v.react('✨')
+if (!v.isGroup) return v.reply(mess.only.group)
+if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
+if (Number(q) === 1) {
+	if (isAntiViewOnce) return v.reply('*𝐄𝐋 𝐀𝐍𝐓𝐈𝐕𝐈𝐄𝐖𝐎𝐍𝐂𝐄 𝐘𝐀 𝐇𝐀𝐁𝐈𝐀 𝐒𝐈𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐀*')
+	antiviewonce.push(v.chat)
+	fs.writeFileSync('./database/group/antiviewonce.json', Json(antiviewonce))
+	v.reply('*𝐒𝐄 𝐇𝐀 𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎 𝐄𝐋 𝐀𝐍𝐓𝐈𝐕𝐈𝐄𝐖𝐎𝐍𝐂𝐄*')
+} else if (Number(q) === 0) {
+	if (!isAntiViewOnce) return v.reply('*𝐄𝐋 𝐀𝐍𝐓𝐈𝐕𝐈𝐖𝐄𝐎𝐍𝐂𝐄 𝐘𝐀 𝐇𝐀𝐁𝐈𝐀 𝐒𝐈𝐃𝐎 𝐃𝐄𝐒𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐀*')
+	antiviewonce.splice(v.chat)
+	fs.writeFileSync('./database/group/antiviewonce.json', Json(antiviewonce))
+	v.reply('*𝐒𝐄 𝐇𝐀 𝐃𝐄𝐒𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎 𝐄𝐋 𝐀𝐍𝐓𝐈𝐕𝐈𝐄𝐖𝐎𝐍𝐂𝐄*')
+} else {
+	v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
+}
+break
 
 case 'welcome':
 if (inky.isJadi) return v.react('❌')
