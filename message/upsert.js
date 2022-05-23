@@ -150,6 +150,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}*El bot esta en mantenimiento
  *𝐌𝐨𝐝𝐨:* *${inky.self ? 'Privado' : 'Publico'}*${inky.isJadi ? `
  Bot Original: https://wa.me/${inky.botNumber}` : ''}
  *𝐋𝐢𝐛𝐫𝐞𝐫𝐢́𝐚:* *@adiwajshing/baileys@4.1.0*
+ break
 
 			default:
 				
