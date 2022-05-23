@@ -186,7 +186,7 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟    ${prefix}   
 
 »  *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑*  « 
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}sticker / ${prefix}s
 ° ඬ⃟    ${prefix}   
 ° ඬ⃟    ${prefix}   
 ° ඬ⃟    ${prefix}  
@@ -252,7 +252,7 @@ if ((v.type === 'imageMessage') || isQuotedImage) {
 	writeExif(stik, {packname: 'BOT' + v.pushName + '༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻' + senderNumber + ' ღ', author: ''})
 		.then(x => v.replyS(x))
 } else {
-	v.reply('𝐑𝐞𝐬𝐩𝐨𝐧𝐝𝐚 𝐚 𝐮𝐧𝐚 𝐢𝐦𝐚𝐠𝐞𝐧 𝐨 𝐯𝐢𝐝𝐞𝐨 𝐜𝐨𝐧 𝐞𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 ' + prefix + command)
+	v.reply('*𝐑𝐞𝐬𝐩𝐨𝐧𝐝𝐚 𝐚 𝐮𝐧𝐚 𝐢𝐦𝐚𝐠𝐞𝐧 𝐨 𝐯𝐢𝐝𝐞𝐨 𝐜𝐨𝐧 𝐞𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨*' + prefix + command)
 }
 break
 
