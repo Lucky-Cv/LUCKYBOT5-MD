@@ -229,6 +229,22 @@ await v.react('✨')
 v.replyContact('༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻', 'Creador de ' + botName, '34643694252')
 break
 
+case 'modo':
+if (!isStaff) return v.react('❌')
+await v.react('✨')
+if (q.toLowerCase() === 'public') {
+	if (!inky.self) return v.reply('Ya estaba activo el modo publico')
+	inky.self = false
+	v.reply('Se ha activado el modo publico')
+} else if (q.toLowerCase() === 'self') {
+	if (inky.self) return v.reply('Ya estaba activo el modo privado')
+	inky.self = true
+	v.reply('Se ha activado el modo privado')
+} else {
+	v.reply('Use *' + prefix + command + ' <public/self>*')
+}
+break
+
 
 //                  CREADOR                //
 
