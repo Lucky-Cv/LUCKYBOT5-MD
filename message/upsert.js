@@ -386,6 +386,32 @@ break
 
 //                  GRUPOS                //
 
+case 'promote':
+await v.react('✨')
+if (!v.isGroup) return v.reply(mess.only.group)
+if (!isGroupAdmins) return v.reply(mess.only.admins)
+if (!isBotAdmin) return v.reply(mess.only.badmin)
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎𝐍𝐄 𝐀 𝐔𝐍 𝐔𝐒𝐔𝐀𝐑𝐈𝐎*')
+if (v.sender === v.mentionUser[0]) return v.reply('*𝐍𝐎 𝐏𝐔𝐄𝐃𝐄 𝐏𝐑𝐎𝐌𝐎𝐓𝐄𝐀𝐑𝐒𝐄 𝐀 𝐔𝐒𝐓𝐄𝐃 𝐌𝐈𝐒𝐌𝐎*')
+if (groupAdmins.includes(v.mentionUser[0])) return v.reply(`El usuario @${v.mentionUser[0].split('@')[0]} ya es administrador`, v.chat, {mentions: [v.mentionUser[0], v.sender]})
+inky.groupParticipantsUpdate(v.chat, [v.mentionUser[0]], 'promote')
+	.then(x => v.reply(`Ha sido promovido a @${v.mentionUser[0].split('@')[0]} como administrador por @${senderNumber}`, v.chat, {mentions: [v.mentionUser[0], v.sender]}))
+	.catch(e => v.reply(e))
+break
+
+case 'demote':
+await v.react('✨')
+if (!v.isGroup) return v.reply(mess.only.group)
+if (!isGroupAdmins) return v.reply(mess.only.admins)
+if (!isBotAdmin) return v.reply(mess.only.badmin)
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎𝐍𝐀 𝐀 𝐔𝐍 𝐔𝐒𝐔𝐀𝐑𝐈𝐎*')
+if (v.sender === v.mentionUser[0]) return v.reply('*𝐍𝐎 𝐏𝐔𝐄𝐃𝐄 𝐃𝐄𝐌𝐎𝐓𝐄𝐀𝐑𝐒𝐄 𝐀 𝐔𝐒𝐓𝐄𝐃 𝐌𝐈𝐒𝐌𝐎*')
+if (!groupAdmins.includes(v.mentionUser[0])) return v.reply(`El usuario @${v.mentionUser[0].split('@')[0]} no es administrador`, v.chat, {mentions: [v.mentionUser[0], v.sender]})
+inky.groupParticipantsUpdate(v.chat, [v.mentionUser[0]], 'demote')
+	.then(x => v.reply(`Ha sido removido a @${v.mentionUser[0].split('@')[0]} como administrador por @${senderNumber}`, v.chat, {mentions: [v.mentionUser[0], v.sender]}))
+	.catch(e => v.reply(e))
+break
+
 case 'antiviewonce':
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
