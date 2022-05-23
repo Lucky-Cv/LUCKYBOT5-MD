@@ -364,6 +364,25 @@ break
 
 //                  GRUPOS                //
 
+case 'antilink':
+await v.react('✨')
+if (!v.isGroup) return v.reply(mess.only.group)
+if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
+if (Number(q) === 1) {
+	if (isAntiLink) return v.reply('*𝐄𝐋 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊 𝐘𝐀 𝐄𝐒𝐓𝐀𝐁𝐀 𝐀𝐂𝐓𝐈𝐕𝐎*')
+	antilink.push(v.chat)
+	fs.writeFileSync('./database/group/antilink.json', Json(antilink))
+	v.reply('*𝐒𝐄 𝐀𝐂𝐓𝐈𝐕𝐎 𝐄𝐋 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊*')
+} else if (Number(q) === 0) {
+	if (!isAntiLink) return v.reply('*𝐄𝐋 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊 𝐘𝐀 𝐄𝐒𝐓𝐀𝐁𝐀 𝐃𝐄𝐒𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎*')
+	antilink.splice(v.chat)
+	fs.writeFileSync('./database/group/antilink.json', Json(antilink))
+	v.reply('*𝐒𝐄 𝐇𝐀 𝐃𝐄𝐒𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎 𝐄𝐋 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊*')
+} else {
+	v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
+}
+break
+
 case 'viewonce':
 await v.react('✨')
 if (!isQuotedViewOnce) return
