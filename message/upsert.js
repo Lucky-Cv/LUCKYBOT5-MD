@@ -162,53 +162,53 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 \t\t\t\t\t\t\t\t\t *COMANDOS*
 
 »  *𝐕𝐈𝐏*  «  
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}  
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}  
 
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}  
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}  
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
 
 »  *𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀*  «  
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix} 
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix} 
 
 »  *𝐉𝐔𝐄𝐆𝐎𝐒*  «  
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
 
 »  *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑*  « 
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}   
-° ඬ⃟  ${prefix}  
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}  
 
 »  *𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐑*  «  
-° ඬ⃟  ${prefix}
-° ඬ⃟  ${prefix}
-° ඬ⃟  ${prefix}
+° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}
 ${isStaff ? `
 »  *𝐒𝐓𝐀𝐅𝐅*  «  
-° ඬ⃟  ${prefix}
-° ඬ⃟  ${prefix}
-° ඬ⃟  ${prefix}
-° ඬ⃟  ${prefix}
-° ඬ⃟  ${prefix}
-° ඬ⃟  ${prefix}
+° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}
 `: ''}${isOwner ? `
 ° ඬ⃟   *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
-° ඬ⃟  ${prefix}owner
-° ඬ⃟  ${prefix}
-° ඬ⃟   $
-° ඬ⃟   >
+° ඬ⃟    ${prefix}owner
+° ඬ⃟    ${prefix}
+° ඬ⃟    $
+° ඬ⃟    >
 ` : ''}
 \t\t\t\t\t\t\t\t  *${botName}*`
 var footer = `│ ➼ ${fake}\n│ ➼ Runtime: ${runtime(process.uptime())}`
