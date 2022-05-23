@@ -143,6 +143,8 @@ break
 
 case 'menu'
 await v.react('✅')
+var teks = `Hola`
+break
 
 
 			default:
