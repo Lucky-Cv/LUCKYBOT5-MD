@@ -206,7 +206,7 @@ ${isStaff ? `
 `: ''}${isOwner ? `
 ° ඬ⃟   *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
 ° ඬ⃟    ${prefix}owner
-° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}modo self/public
 ° ඬ⃟    $
 ° ඬ⃟    >
 ` : ''}
