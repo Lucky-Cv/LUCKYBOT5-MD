@@ -385,6 +385,26 @@ break
 
 //                  GRUPOS                //
 
+case 'welcome':
+if (inky.isJadi) return v.react('❌')
+await v.react('✨')
+if (!v.isGroup) return v.reply(mess.only.group)
+if (!q) return v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
+if (Number(q) === 1) {
+	if (isWelcome) return v.reply('*𝐋𝐀 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐀 𝐇𝐀𝐁𝐈𝐀 𝐒𝐈𝐃𝐎 𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎*')
+	welcome.push(v.chat)
+	fs.writeFileSync('./database/group/welcome.json', Json(welcome))
+	v.reply('*𝐒𝐄 𝐇𝐀 𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎 𝐄𝐋 𝐌𝐄𝐍𝐒𝐀𝐉𝐄 𝐃𝐄 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐀*')
+} else if (Number(q) === 0) {
+	if (!isWelcome) return v.reply('*𝐄𝐋 𝐌𝐄𝐍𝐒𝐀𝐉𝐄 𝐃𝐄 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐀 𝐘𝐀 𝐇𝐀𝐁𝐈𝐀 𝐒𝐈𝐃𝐎 𝐃𝐄𝐒𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎*')
+	welcome.splice(v.chat)
+	fs.writeFileSync('./database/group/welcome.json', Json(welcome))
+	v.reply('*𝐒𝐄 𝐇𝐀 𝐃𝐄𝐒𝐀𝐂𝐓𝐈𝐕𝐀𝐃𝐎 𝐄𝐋 𝐌𝐄𝐍𝐒𝐀𝐉𝐄 𝐃𝐄 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐀*')
+} else {
+	v.reply(`Use *${prefix + command} 1* para activarlo o *${prefix + command} 0* para desactivarlo`)
+}
+break
+
 case 'antilink':
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
