@@ -299,6 +299,25 @@ break
 
 //                  STAFF                //
 
+case 'baltop':
+case 'topbal':
+await v.react('✨')
+var none = JSON.parse(fs.readFileSync('./database/user/money.json'))
+var teks = '\t\t\t\t\t*' + botName + '*-𝐓𝐨𝐩 𝐁𝐚𝐥*'
+none.sort((a, b) => (a.money < b.money) ? 1 : -1)
+let jidsTop = []
+var total = 10
+var userRank = (user) => {
+	if (owner.includes(user)) {var rankS = '👑 𝐎𝐖𝐍𝐄𝐑 👑'} else if (staff.includes(user)) {var rankS = '🎮 𝐒𝐓𝐀𝐅𝐅 🎮'} else if (vip.includes(user)) {var rankS = '✨  𝐕𝐈𝐏 '✨} else {var rankS = '𝐔𝐒𝐔𝐀𝐑𝐈𝐈'}
+	return rankS
+}
+if (none.length < 10) total = none.length
+for (let i = 0; i < total; i++) {
+	teks += `\n\n${i + 1}.  @${none[i].id}\n\t\t│ ➼ Balance: *$${h2k(none[i].money)}*\n\t\t│ ➼ Rango: *${userRank(none[i].id)}*`
+	jidsTop.push(none[i].id + '@s.whatsapp.net')
+}
+v.reply(teks, v.chat, {mentions: jidsTop})
+break
 //                  DESCARGAS                //
 
 case 'play':
