@@ -722,7 +722,7 @@ if ((sFiles[0].sticker.includes(q + '.webp')) || (sFiles[0].audio.includes(q + '
 	}
 	if (sFiles[0].image.includes(q + '.jpg')) {
 		await fs.unlinkSync('./media/image/' + q + '.jpg')
-		v.reply('𝐈𝐌𝐀𝐆𝐄𝐍 𝐄𝐋𝐈𝐌𝐈𝐍𝐀𝐃𝐀 𝐄𝐗𝐈𝐓𝐎𝐒𝐀𝐌𝐄𝐍𝐓𝐄*')
+		v.reply('*𝐈𝐌𝐀𝐆𝐄𝐍 𝐄𝐋𝐈𝐌𝐈𝐍𝐀𝐃𝐀 𝐄𝐗𝐈𝐓𝐎𝐒𝐀𝐌𝐄𝐍𝐓𝐄*')
 	}
 	if (sFiles[0].video.includes(q + '.mp4')) {
 		await fs.unlinkSync('./media/video/' + q + '.mp4')
