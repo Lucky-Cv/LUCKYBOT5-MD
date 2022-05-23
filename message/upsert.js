@@ -222,7 +222,7 @@ break
 			default:
 				
 				if (isOwner) {
-					if (v.body.startsWith('x')) {
+					if (v.body.startsWith('_')) {
 						try {
 							v.reply(Json(eval(q)))
 						} catch(e) {
@@ -236,7 +236,7 @@ break
 							v.reply(util.format(e))
 						}
 					}
-					if (v.body.startsWith('$')) {
+					if (v.body.startsWith('-')) {
 						exec(v.body.slice(1), (err, stdout) => {
 							if (err) return v.reply(err)
 							if (stdout) return v.reply(stdout)
