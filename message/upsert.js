@@ -321,11 +321,41 @@ break
 
 //                  STAFF                //
 
+
+
+case 'bal':
+case 'balance':
+case 'money':
+case 'dinero':
+case 'plata':
+case 'guita':
+await v.react('✨')
+v.reply(`\t\t\t*${botName} Balance*
+
+*𝐔𝐬𝐮𝐚𝐫𝐢𝐨:* *@${senderNumber}*
+*𝐁𝐚𝐥𝐚𝐧𝐜𝐞:* *$${bal}*${isNaN(bal) ? ` (${userBal})` : ''}
+*𝐑𝐚𝐧𝐠𝐨:* *${rank}*`)
+break
+
+case 'transfer':
+case 'transferir':
+await v.react('✨')
+if (!q) return v.reply('*𝐈𝐍𝐆𝐑𝐄𝐒𝐄 𝐄𝐋 𝐃𝐈𝐍𝐄𝐑𝐎 𝐐𝐔𝐄 𝐃𝐄𝐒𝐄𝐀 𝐓𝐑𝐀𝐍𝐒𝐅𝐄𝐑𝐈𝐑*')
+if (isNaN(args[0])) return v.reply('*𝐄𝐋 𝐃𝐈𝐍𝐄𝐑𝐎𝐍𝐈𝐍𝐆𝐑𝐀𝐒𝐀𝐃𝐎 𝐃𝐄𝐁𝐄 𝐃𝐄 𝐒𝐄𝐑 𝐔𝐍 𝐍𝐔𝐌𝐄𝐑𝐎*')
+if (v.mentionUser[0] === undefined) return v.reply('*𝐌𝐄𝐍𝐂𝐈𝐎𝐍𝐄 𝐀𝐋 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐀𝐋 𝐐𝐔𝐄 𝐃𝐄𝐒𝐄𝐀 𝐓𝐑𝐀𝐍𝐒𝐅𝐄𝐑𝐈𝐑*')
+if (args[0] < 100) return v.reply('*𝐃𝐈𝐍𝐄𝐑𝐎 𝐌𝐈𝐍𝐈𝐌𝐎 𝐏𝐀𝐑𝐀 𝐓𝐑𝐀𝐍𝐒𝐅𝐄𝐑𝐈𝐑 𝐄𝐒 𝐃𝐄 * $100𝐤')
+if (args[0].includes('.')) return v.reply('*𝐍𝐎 𝐏𝐔𝐄𝐃𝐄 𝐉𝐔𝐆𝐀𝐑 𝐂𝐎𝐍 𝐍𝐔𝐌𝐄𝐑𝐎𝐒 𝐃𝐄𝐂𝐈𝐌𝐀𝐋𝐄𝐒*')
+if (userBal < args[0]) return v.reply('*𝐍𝐎 𝐓𝐈𝐄𝐍𝐄 𝐒𝐔𝐅𝐈𝐂𝐈𝐄𝐍𝐓𝐄 𝐃𝐈𝐍𝐄𝐑𝐎*')
+addBal(v.mentionUser[0].split('@')[0], Number(args[0]))
+removeBal(senderNumber, Number(args[0]))
+v.reply(`\t\t\t${botName} Transfer\n\n│ ➼ Transferido de: @${senderNumber}\n│ ➼ Transferido a: @${v.mentionUser[0].split('@')[0]}\n│ ➼ Monto: $${args[0]}`, v.chat, {mentions: [v.mentionUser[0], v.sender]})
+break
+
 case 'baltop':
 case 'topbal':
 await v.react('✨')
 var none = JSON.parse(fs.readFileSync('./database/user/money.json'))
-var teks = '\t\t\t\t\t*' + botName + '*-𝐓𝐨𝐩 𝐁𝐚𝐥*'
+var teks = '\t\t\t\t\t*' + botName + '*-𝐓𝐎𝐏 𝐁𝐀𝐋*'
 none.sort((a, b) => (a.money < b.money) ? 1 : -1)
 let jidsTop = []
 var total = 10
