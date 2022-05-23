@@ -303,6 +303,28 @@ var buffer = await getBuffer(play.all[0].image)
 replyTempImg(teks, fake, buttons, buffer)
 break
 
+case 'ytmp3':
+await v.react('✨')
+if (!q || !isUrl(q) && !q.includes('youtu')) return v.reply('*𝐂𝐎𝐌𝐀𝐍𝐃𝐎 𝐈𝐍𝐂𝐎𝐑𝐑𝐄𝐂𝐓𝐎, 𝐔𝐒𝐄': *' + prefix + command + ' <link>*')
+v.reply(mess.wait)
+hx.youtube(q)
+	.then(async(x) => {
+	await v.replyAud({url: x.mp3}, v.chat, {ptt: true})
+	v.replyDoc({url: x.mp3}, v.chat, {mimetype: 'audio/mpeg', filename: x.title + '.mp3'})
+})
+	.catch(e => v.reply('*𝐇𝐔𝐁𝐎 𝐔𝐍 𝐄𝐑𝐑𝐎𝐑 𝐀𝐋 𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐑 𝐒𝐔 𝐀𝐑𝐂𝐇𝐈𝐕𝐎*'))
+break
+
+case 'ytmp4':
+await v.react('✨')
+if (!q || !isUrl(q) && !q.includes('youtu')) return v.reply('Comando incorrecto, use: *' + prefix + command + ' <link>*')
+v.reply(mess.wait)
+hx.youtube(q)
+	.then(x => v.replyVid({url: x.link}, fake))
+	.catch(e => v.reply('*𝐇𝐔𝐁𝐎 𝐔𝐍 𝐄𝐑𝐑𝐎𝐑 𝐀𝐋 𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐑 𝐒𝐔 𝐀𝐑𝐂𝐇𝐈𝐕𝐎*'))
+break
+
+
 //                  GRUPOS                //
 
 //                  JUEGOS                //
