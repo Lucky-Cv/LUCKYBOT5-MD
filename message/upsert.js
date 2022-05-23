@@ -345,6 +345,7 @@ break
 
 //                  GRUPOS                //
 
+case 'ban':
 if (isBanned) return  reply(mess.banned)              
 					if (!v.isGroup) return v.reply(mess.only.group)
 					if (!isGroupAdmins) return v.reply(mess.only.admins)	
