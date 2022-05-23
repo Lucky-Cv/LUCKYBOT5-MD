@@ -188,11 +188,11 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 »  *𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑*  « 
 ° ඬ⃟    ${prefix}sticker / ${prefix}s
 ° ඬ⃟    ${prefix}robar
-° ඬ⃟    ${prefix}   
+° ඬ⃟    ${prefix}lucky
 ° ඬ⃟    ${prefix}  
 
 »  *𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐑*  «  
-° ඬ⃟    ${prefix}
+° ඬ⃟    ${prefix}play <txt>
 ° ඬ⃟    ${prefix}
 ° ඬ⃟    ${prefix}
 ${isStaff ? `
@@ -289,7 +289,7 @@ await v.react('✨')
 if (!q) return v.reply('Use *' + prefix + command + ' <texto>*')
 var play = await yts(q)
 var teks = `\t\t\t\t\t\t\t\t\t► ${botName} 
-                                   *Youtube*
+                                        *Youtube*
 
 *𝐓𝐈𝐓𝐔𝐋𝐎:* ${play.all[0].title}
 *𝐃𝐔𝐑𝐀𝐂𝐈𝐎𝐍:* ${play.all[0].timestamp}
