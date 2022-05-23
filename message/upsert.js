@@ -205,7 +205,7 @@ ${isStaff ? `
 ° ඬ⃟  ${prefix}
 `: ''}${isOwner ? `
 ° ඬ⃟   *𝐂𝐑𝐄𝐀𝐃𝐎𝐑*  «  
-° ඬ⃟  ${prefix}
+° ඬ⃟  ${prefix}owner
 ° ඬ⃟  ${prefix}
 ° ඬ⃟   $
 ° ඬ⃟   >
@@ -226,8 +226,7 @@ case 'creador':
 case 'creator':
 case 'owner':
 await v.react('✨')
-v.replyContact('༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻', 'Creador de ' + botName, '34643694252');
-v.replyContact('WHATSAPP BOT', 'Creador de ' + botName, '34641614021')
+v.replyContact('༺𝒍𝒖𝒄𝒌𝒚𝒃𝒐𝒕༻', 'Creador de ' + botName, '34643694252')
 break
 
 
