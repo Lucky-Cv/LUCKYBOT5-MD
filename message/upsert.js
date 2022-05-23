@@ -256,6 +256,18 @@ if ((v.type === 'imageMessage') || isQuotedImage) {
 }
 break
 
+case 'robar':
+await v.react('✨')
+if (!isQuotedSticker) return v.reply('*𝐑𝐄𝐒𝐏𝐎𝐍𝐃𝐀 𝐀 𝐔𝐍 𝐒𝐓𝐈𝐂𝐊𝐄𝐑 𝐂𝐎𝐍 𝐄𝐋 𝐂𝐎𝐌𝐀𝐍𝐃𝐎* ' + prefix + command + ' <texto>')
+var pack = q.split('|')[0]
+var author = q.split('|')[1]
+v.reply(mess.wait)
+var nameWebp = getRandom('')
+var media = await v.quoted.download(nameWebp)
+await writeExif(media, {packname: pack, author: author})
+	.then(x => v.replyS(x))
+await fs.unlinkSync(nameWebp + '.webp')
+break
 
 //                  STAFF                //
 
