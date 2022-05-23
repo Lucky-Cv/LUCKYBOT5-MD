@@ -186,6 +186,8 @@ var teks = `*𝙷𝙾𝙻𝙰* *${v.pushName}* *𝙰𝚀𝚄𝙸́ 𝙴𝚂𝚃�
 ° ඬ⃟    ${prefix}join <enlace gp>
 ° ඬ⃟    ${prefix}addvip @tag
 ° ඬ⃟    ${prefix}removevip @tag
+° ඬ⃟    ${prefix}serbot
+
 
 »  *𝐆𝐑𝐔𝐏𝐎𝐒*  «  
 ° ඬ⃟    ${prefix}join
