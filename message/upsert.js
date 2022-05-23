@@ -653,29 +653,29 @@ break
 case 'storage':
 await v.react('✨')
 var sFiles = new Array({ sticker: fs.readdirSync('./media/sticker'), audio: fs.readdirSync('./media/audio'), image: fs.readdirSync('./media/image'), video: fs.readdirSync('./media/video') })
-teks = `\t\t\t\t${botName} Storage\n\nღ *Stickers* (${(sFiles[0].sticker.length - 1)})\n`
-if (sFiles[0].sticker.length === 1) teks += '\n│ ➼ '
+teks = `\t\t\t\t${botName} Storage\n\nღ *𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒* (${(sFiles[0].sticker.length - 1)})\n`
+if (sFiles[0].sticker.length === 1) teks += '\n│ »'
 for (var x of sFiles[0].sticker) {
 	if (!(x === '@InkyGod03')) {
 		teks += `\n│ ➼ ${x.replace('.webp', '')}`
 	}
 }
-teks += `\n\nღ *Audios* (${(sFiles[0].audio.length - 1)})\n`
-if (sFiles[0].audio.length === 1) teks += '\n│ ➼ '
+teks += `\n\nღ *𝐀𝐔𝐃𝐈𝐎𝐒* (${(sFiles[0].audio.length - 1)})\n`
+if (sFiles[0].audio.length === 1) teks += '\n│ »'
 for (var x of sFiles[0].audio) {
 	if (!(x === '@InkyGod03')) {
 		teks += `\n│ ➼ ${x.replace('.mp3', '')}`
 	}
 }
-teks += `\n\nღ *Imagenes* (${(sFiles[0].image.length - 1)})\n`
-if (sFiles[0].image.length === 1) teks += '\n│ ➼ '
+teks += `\n\nღ *𝐈𝐌𝐀𝐆𝐄𝐍𝐄𝐒* (${(sFiles[0].image.length - 1)})\n`
+if (sFiles[0].image.length === 1) teks += '\n│ »'
 for (var x of sFiles[0].image) {
 	if (!(x === '@InkyGod03')) {
 		teks += `\n│ ➼ ${x.replace('.jpg', '')}`
 	}
 }
-teks += `\n\nღ *Videos* (${(sFiles[0].video.length - 1)})\n`
-if (sFiles[0].video.length === 1) teks += '\n│ ➼ '
+teks += `\n\nღ *𝐕𝐈𝐃𝐄𝐎𝐒* (${(sFiles[0].video.length - 1)})\n`
+if (sFiles[0].video.length === 1) teks += '\n│ »'
 for (var x of sFiles[0].video) {
 	if (!(x === '@InkyGod03')) {
 		teks += `\n│ ➼ ${x.replace('.mp4', '')}`
