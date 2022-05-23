@@ -345,6 +345,16 @@ break
 
 //                  GRUPOS                //
 
+if (isBanned) return  reply(mess.banned)              
+					if (!v.isGroup) return v.reply(mess.only.group)
+					if (!isGroupAdmins) return v.reply(mess.only.admins)	
+				if (!isBotAdmin) return v.reply(mess.only.badmin)	
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Etiqueta un mensaje oh utiliza @!')
+				    if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Etiqueta un mensaje oh utiliza @!')
+			bai = mek.message.extendedTextMessage.contextInfo.participant
+		    cnf.groupRemove(from, [bai])
+					break
+
 case 'del':
 case 'delete':
 await v.react('✨')
