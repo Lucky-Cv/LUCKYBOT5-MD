@@ -141,8 +141,8 @@ break
 		
 		switch (command) {
 
-case 'menu'
-await v.react('✅')
+case 'menu':
+await v.react('✨')
 var teks = `Hola`
 break
 
