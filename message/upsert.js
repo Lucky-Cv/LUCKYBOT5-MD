@@ -345,7 +345,7 @@ break
 
 //                  GRUPOS                //
 
-case 'kick':
+case 'ban':
 await v.react('✨')
 if (!v.isGroup) return v.reply(mess.only.group)
 if (!isGroupAdmins) return v.reply(mess.only.admins)
@@ -357,16 +357,6 @@ inky.groupParticipantsUpdate(v.chat, [v.mentionUser[0]], 'remove')
 	.then(x => v.reply(`Ha sido eliminado @${v.mentionUser[0].split('@')[0]} del grupo por @${senderNumber}`, v.chat, {mentions: [v.mentionUser[0], v.sender]}))
 	.catch(e => v.reply(e))
 break
-
-case 'ban':
-					if (!v.isGroup) return v.reply(mess.only.group)
-					if (!isGroupAdmins) return v.reply(mess.only.admins)	
-				if (!isBotAdmin) return v.reply(mess.only.badmin)	
-					if (v.message.extendedTextMessage === undefined || v.message.extendedTextMessage === null) return v.reply('Etiqueta un mensaje oh utiliza @!')
-				    if (!v.message.extendedTextMessage === undefined || v.message.extendedTextMessage === null) return v.reply('Etiqueta un mensaje oh utiliza @!')
-			bai = v.message.extendedTextMessage.contextInfo.participant
-		    inky.groupRemove(from, [bai])
-					break
 
 case 'del':
 case 'delete':
